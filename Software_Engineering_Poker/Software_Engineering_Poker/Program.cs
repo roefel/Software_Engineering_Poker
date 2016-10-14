@@ -9,8 +9,6 @@ namespace Software_Engineering_Poker
     static class Program
     {
 
-        //Hello World
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
