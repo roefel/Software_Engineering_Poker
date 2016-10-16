@@ -12,8 +12,11 @@ namespace Software_Engineering_Poker.Table
 {
     public partial class TableUI : UserControl
     {
-        public TableUI()
+        private TableController mController;
+
+        public TableUI(TableController controller)
         {
+            mController = controller;
             InitializeComponent();
         }
     }

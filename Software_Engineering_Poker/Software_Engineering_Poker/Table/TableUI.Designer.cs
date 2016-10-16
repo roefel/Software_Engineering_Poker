@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.tableBox = new System.Windows.Forms.GroupBox();
-            this.computer1Card1 = new System.Windows.Forms.PictureBox();
-            this.computer1Card2 = new System.Windows.Forms.PictureBox();
-            this.tableMoneyCircle = new System.Windows.Forms.PictureBox();
             this.tableMoneyValue = new System.Windows.Forms.Label();
+            this.tableMoneyCircle = new System.Windows.Forms.PictureBox();
+            this.computer1Card2 = new System.Windows.Forms.PictureBox();
+            this.computer1Card1 = new System.Windows.Forms.PictureBox();
             this.tableBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.computer1Card1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computer1Card2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableMoneyCircle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computer1Card2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computer1Card1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableBox
@@ -52,15 +52,24 @@
             this.tableBox.TabIndex = 0;
             this.tableBox.TabStop = false;
             // 
-            // computer1Card1
+            // tableMoneyValue
             // 
-            this.computer1Card1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.computer1Card1.Location = new System.Drawing.Point(18, 19);
-            this.computer1Card1.Name = "computer1Card1";
-            this.computer1Card1.Size = new System.Drawing.Size(65, 80);
-            this.computer1Card1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.computer1Card1.TabIndex = 0;
-            this.computer1Card1.TabStop = false;
+            this.tableMoneyValue.AutoSize = true;
+            this.tableMoneyValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableMoneyValue.Location = new System.Drawing.Point(434, 169);
+            this.tableMoneyValue.Name = "tableMoneyValue";
+            this.tableMoneyValue.Size = new System.Drawing.Size(89, 31);
+            this.tableMoneyValue.TabIndex = 5;
+            this.tableMoneyValue.Text = "1000$";
+            // 
+            // tableMoneyCircle
+            // 
+            this.tableMoneyCircle.ImageLocation = "Software_Engineering_Poker\\images\\assets\\circle.png";
+            this.tableMoneyCircle.Location = new System.Drawing.Point(373, 119);
+            this.tableMoneyCircle.Name = "tableMoneyCircle";
+            this.tableMoneyCircle.Size = new System.Drawing.Size(209, 133);
+            this.tableMoneyCircle.TabIndex = 4;
+            this.tableMoneyCircle.TabStop = false;
             // 
             // computer1Card2
             // 
@@ -73,24 +82,15 @@
             this.computer1Card2.TabIndex = 3;
             this.computer1Card2.TabStop = false;
             // 
-            // tableMoneyCircle
+            // computer1Card1
             // 
-            this.tableMoneyCircle.ImageLocation = "Software_Engineering_Poker\\images\\assets\\circle.png";
-            this.tableMoneyCircle.Location = new System.Drawing.Point(373, 119);
-            this.tableMoneyCircle.Name = "tableMoneyCircle";
-            this.tableMoneyCircle.Size = new System.Drawing.Size(209, 133);
-            this.tableMoneyCircle.TabIndex = 4;
-            this.tableMoneyCircle.TabStop = false;
-            // 
-            // tableMoneyValue
-            // 
-            this.tableMoneyValue.AutoSize = true;
-            this.tableMoneyValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableMoneyValue.Location = new System.Drawing.Point(434, 169);
-            this.tableMoneyValue.Name = "tableMoneyValue";
-            this.tableMoneyValue.Size = new System.Drawing.Size(89, 31);
-            this.tableMoneyValue.TabIndex = 5;
-            this.tableMoneyValue.Text = "1000$";
+            this.computer1Card1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.computer1Card1.Location = new System.Drawing.Point(18, 19);
+            this.computer1Card1.Name = "computer1Card1";
+            this.computer1Card1.Size = new System.Drawing.Size(65, 80);
+            this.computer1Card1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.computer1Card1.TabIndex = 0;
+            this.computer1Card1.TabStop = false;
             // 
             // TableUI
             // 
@@ -101,9 +101,9 @@
             this.Size = new System.Drawing.Size(975, 408);
             this.tableBox.ResumeLayout(false);
             this.tableBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.computer1Card1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computer1Card2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableMoneyCircle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computer1Card2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computer1Card1)).EndInit();
             this.ResumeLayout(false);
 
         }

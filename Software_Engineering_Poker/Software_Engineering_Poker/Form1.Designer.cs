@@ -39,6 +39,8 @@
             this.Text = "Form1";
             this.ResumeLayout(false);
 
+            //Create new instance of table
+
         }
 
         #endregion
