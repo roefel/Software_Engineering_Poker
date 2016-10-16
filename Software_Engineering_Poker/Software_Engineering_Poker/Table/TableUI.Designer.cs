@@ -31,19 +31,19 @@
             this.tableBox = new System.Windows.Forms.GroupBox();
             this.computer1Card1 = new System.Windows.Forms.PictureBox();
             this.computer1Card2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tableMoneyCircle = new System.Windows.Forms.PictureBox();
             this.tableMoneyValue = new System.Windows.Forms.Label();
             this.tableBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.computer1Card1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer1Card2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableMoneyCircle)).BeginInit();
             this.SuspendLayout();
             // 
             // tableBox
             // 
             this.tableBox.BackgroundImage = global::Software_Engineering_Poker.Properties.Resources.poker_table;
             this.tableBox.Controls.Add(this.tableMoneyValue);
-            this.tableBox.Controls.Add(this.pictureBox1);
+            this.tableBox.Controls.Add(this.tableMoneyCircle);
             this.tableBox.Controls.Add(this.computer1Card2);
             this.tableBox.Controls.Add(this.computer1Card1);
             this.tableBox.Location = new System.Drawing.Point(15, 16);
@@ -73,14 +73,14 @@
             this.computer1Card2.TabIndex = 3;
             this.computer1Card2.TabStop = false;
             // 
-            // pictureBox1
+            // tableMoneyCircle
             // 
-            this.pictureBox1.ImageLocation = "Software_Engineering_Poker\\images\\assets\\circle.png";
-            this.pictureBox1.Location = new System.Drawing.Point(373, 119);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 133);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.tableMoneyCircle.ImageLocation = "Software_Engineering_Poker\\images\\assets\\circle.png";
+            this.tableMoneyCircle.Location = new System.Drawing.Point(373, 119);
+            this.tableMoneyCircle.Name = "tableMoneyCircle";
+            this.tableMoneyCircle.Size = new System.Drawing.Size(209, 133);
+            this.tableMoneyCircle.TabIndex = 4;
+            this.tableMoneyCircle.TabStop = false;
             // 
             // tableMoneyValue
             // 
@@ -103,7 +103,7 @@
             this.tableBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.computer1Card1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer1Card2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableMoneyCircle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,7 +113,7 @@
         private System.Windows.Forms.GroupBox tableBox;
         private System.Windows.Forms.PictureBox computer1Card1;
         private System.Windows.Forms.PictureBox computer1Card2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox tableMoneyCircle;
         private System.Windows.Forms.Label tableMoneyValue;
     }
 }
