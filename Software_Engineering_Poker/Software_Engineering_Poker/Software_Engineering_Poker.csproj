@@ -52,12 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MoneyController.cs" />
-    <Compile Include="MoneyModel.cs" />
-    <Compile Include="MoneyUI.cs">
+    <Compile Include="Money\MoneyController.cs" />
+    <Compile Include="Money\MoneyModel.cs" />
+    <Compile Include="Money\MoneyUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MoneyUI.Designer.cs">
+    <Compile Include="Money\MoneyUI.Designer.cs">
       <DependentUpon>MoneyUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -65,7 +65,7 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MoneyUI.resx">
+    <EmbeddedResource Include="Money\MoneyUI.resx">
       <DependentUpon>MoneyUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
