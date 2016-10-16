@@ -68,7 +68,7 @@
             this.allBtn.Name = "allBtn";
             this.allBtn.Size = new System.Drawing.Size(205, 117);
             this.allBtn.TabIndex = 8;
-            this.allBtn.Text = "All-In";
+            this.allBtn.Text = "All-In\n\n";
             this.allBtn.UseVisualStyleBackColor = false;
             this.allBtn.Click += new System.EventHandler(this.allBtn_Click);
             // 
@@ -78,6 +78,7 @@
             this.bidRaiseTxtBox.Name = "bidRaiseTxtBox";
             this.bidRaiseTxtBox.Size = new System.Drawing.Size(100, 20);
             this.bidRaiseTxtBox.TabIndex = 9;
+            this.bidRaiseTxtBox.Text = "0 $";
             this.bidRaiseTxtBox.TextChanged += new System.EventHandler(this.bidRaiseTxtBox_TextChanged);
             // 
             // callBtn

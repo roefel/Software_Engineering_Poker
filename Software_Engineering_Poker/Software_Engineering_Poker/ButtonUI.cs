@@ -24,11 +24,13 @@ namespace Software_Engineering_Poker
         private void raiseBtn_Click(object sender, EventArgs e)
         {
             //mController.doeiets()
+            mController.toggleVast();
         }
 
         private void allBtn_Click(object sender, EventArgs e)
         {
             //mController.doeiets()
+            mController.toggleVast();
         }
 
         private void foldBtn_Click(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace Software_Engineering_Poker
         private void bidRaiseTxtBox_TextChanged(object sender, EventArgs e)
         {
             //mController.doeiets()
+            mController.toggleVast();
         }
 
         private void callBtn_Click(object sender, EventArgs e)
@@ -49,6 +52,19 @@ namespace Software_Engineering_Poker
         private void raiseBidLabel_Click(object sender, EventArgs e)
         {
             //mController.doeiets()
+        }
+
+        //update de view
+        public void updateAllBtn()
+        {
+            allBtn.BackColor = (mController.getVast) ? Color.LightGray : default(Color);
+            allBtn.Text = allBtn.Text + mController.TotalMoney.ToString() + " $";
+        }
+
+        public void updateRaiseBtn()
+        {
+            raiseBtn.BackColor = (mController.getVast) ? Color.LightGray : default(Color);
+            raiseBtn.Text = raiseBtn.Text + mController.CurrentBid.ToString() + " + " + bidRaiseTxtBox.Text;
         }
     }
 }
