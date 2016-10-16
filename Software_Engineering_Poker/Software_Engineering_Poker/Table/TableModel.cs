@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Software_Engineering_Poker.Table
+namespace Software_Engineering_Poker
 {
     public class TableModel
     {

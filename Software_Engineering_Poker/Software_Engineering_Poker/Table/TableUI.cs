@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Software_Engineering_Poker.Table
+namespace Software_Engineering_Poker
 {
     public partial class TableUI : UserControl
     {

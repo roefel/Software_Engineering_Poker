@@ -1,4 +1,4 @@
-﻿namespace Software_Engineering_Poker.Table
+﻿namespace Software_Engineering_Poker
 {
     partial class TableUI
     {

@@ -40,6 +40,13 @@
             this.ResumeLayout(false);
 
             //Create new instance of table
+            TableController table = new TableController();
+
+            //Add table view to form
+            this.Controls.Add(table.view);
+
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 
         }
 
