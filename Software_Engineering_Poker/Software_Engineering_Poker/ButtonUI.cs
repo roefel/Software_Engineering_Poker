@@ -38,7 +38,7 @@ namespace Software_Engineering_Poker
 
         }
 
-        private void bidRaidTxtBox_TextChanged(object sender, EventArgs e)
+        private void bidRaiseTxtBox_TextChanged(object sender, EventArgs e)
         {
 
         }

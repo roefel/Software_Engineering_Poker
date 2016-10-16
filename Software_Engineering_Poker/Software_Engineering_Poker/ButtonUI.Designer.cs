@@ -31,61 +31,65 @@
             this.raiseBtn = new System.Windows.Forms.Button();
             this.foldBtn = new System.Windows.Forms.Button();
             this.allBtn = new System.Windows.Forms.Button();
-            this.bidRaidTxtBox = new System.Windows.Forms.TextBox();
+            this.bidRaiseTxtBox = new System.Windows.Forms.TextBox();
             this.callBtn = new System.Windows.Forms.Button();
             this.raiseBidLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // raiseBtn
             // 
+            this.raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
             this.raiseBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.raiseBtn.Location = new System.Drawing.Point(0, 0);
             this.raiseBtn.Name = "raiseBtn";
             this.raiseBtn.Size = new System.Drawing.Size(150, 59);
             this.raiseBtn.TabIndex = 0;
             this.raiseBtn.Text = "Raise";
-            this.raiseBtn.UseVisualStyleBackColor = true;
+            this.raiseBtn.UseVisualStyleBackColor = false;
             this.raiseBtn.Click += new System.EventHandler(this.raiseBtn_Click);
             // 
             // foldBtn
             // 
+            this.foldBtn.BackColor = System.Drawing.Color.Red;
             this.foldBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.foldBtn.Location = new System.Drawing.Point(380, 0);
             this.foldBtn.Name = "foldBtn";
             this.foldBtn.Size = new System.Drawing.Size(150, 59);
             this.foldBtn.TabIndex = 7;
             this.foldBtn.Text = "Fold";
-            this.foldBtn.UseVisualStyleBackColor = true;
+            this.foldBtn.UseVisualStyleBackColor = false;
             this.foldBtn.Click += new System.EventHandler(this.foldBtn_Click);
             // 
             // allBtn
             // 
+            this.allBtn.BackColor = System.Drawing.Color.LimeGreen;
             this.allBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.allBtn.Location = new System.Drawing.Point(570, 0);
             this.allBtn.Name = "allBtn";
             this.allBtn.Size = new System.Drawing.Size(205, 117);
             this.allBtn.TabIndex = 8;
             this.allBtn.Text = "All-In";
-            this.allBtn.UseVisualStyleBackColor = true;
+            this.allBtn.UseVisualStyleBackColor = false;
             this.allBtn.Click += new System.EventHandler(this.allBtn_Click);
             // 
-            // bidRaidTxtBox
+            // bidRaiseTxtBox
             // 
-            this.bidRaidTxtBox.Location = new System.Drawing.Point(49, 76);
-            this.bidRaidTxtBox.Name = "bidRaidTxtBox";
-            this.bidRaidTxtBox.Size = new System.Drawing.Size(100, 20);
-            this.bidRaidTxtBox.TabIndex = 9;
-            this.bidRaidTxtBox.TextChanged += new System.EventHandler(this.bidRaidTxtBox_TextChanged);
+            this.bidRaiseTxtBox.Location = new System.Drawing.Point(49, 76);
+            this.bidRaiseTxtBox.Name = "bidRaiseTxtBox";
+            this.bidRaiseTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.bidRaiseTxtBox.TabIndex = 9;
+            this.bidRaiseTxtBox.TextChanged += new System.EventHandler(this.bidRaiseTxtBox_TextChanged);
             // 
             // callBtn
             // 
+            this.callBtn.BackColor = System.Drawing.Color.LightSeaGreen;
             this.callBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.callBtn.Location = new System.Drawing.Point(190, 0);
             this.callBtn.Name = "callBtn";
             this.callBtn.Size = new System.Drawing.Size(150, 59);
             this.callBtn.TabIndex = 10;
             this.callBtn.Text = "Call";
-            this.callBtn.UseVisualStyleBackColor = true;
+            this.callBtn.UseVisualStyleBackColor = false;
             this.callBtn.Click += new System.EventHandler(this.callBtn_Click);
             // 
             // raiseBidLabel
@@ -105,7 +109,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.raiseBidLabel);
             this.Controls.Add(this.callBtn);
-            this.Controls.Add(this.bidRaidTxtBox);
+            this.Controls.Add(this.bidRaiseTxtBox);
             this.Controls.Add(this.allBtn);
             this.Controls.Add(this.foldBtn);
             this.Controls.Add(this.raiseBtn);
@@ -121,7 +125,7 @@
         private System.Windows.Forms.Button raiseBtn;
         private System.Windows.Forms.Button foldBtn;
         private System.Windows.Forms.Button allBtn;
-        private System.Windows.Forms.TextBox bidRaidTxtBox;
+        private System.Windows.Forms.TextBox bidRaiseTxtBox;
         private System.Windows.Forms.Button callBtn;
         private System.Windows.Forms.Label raiseBidLabel;
     }
