@@ -39,6 +39,15 @@
             this.Text = "Form1";
             this.ResumeLayout(false);
 
+            //Create new instance of table
+            ButtonController button = new ButtonController();
+
+            //Add button view to form
+            this.Controls.Add(button.view);
+
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            
         }
 
         #endregion

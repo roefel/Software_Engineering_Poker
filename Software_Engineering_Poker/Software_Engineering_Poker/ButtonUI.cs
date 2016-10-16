@@ -12,45 +12,43 @@ namespace Software_Engineering_Poker
 {
     public partial class ButtonUI : UserControl
     {
-        public ButtonUI()
+        private ButtonController mController;
+
+        public ButtonUI(ButtonController controller)
         {
+            mController = controller;
             InitializeComponent();
         }
 
 
         private void raiseBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void testBtn_Click(object sender, EventArgs e)
-        {
-
+            //mController.doeiets()
         }
 
         private void allBtn_Click(object sender, EventArgs e)
         {
-
+            //mController.doeiets()
         }
 
         private void foldBtn_Click(object sender, EventArgs e)
         {
-
+            //mController.doeiets()
         }
 
         private void bidRaiseTxtBox_TextChanged(object sender, EventArgs e)
         {
-
+            //mController.doeiets()
         }
 
         private void callBtn_Click(object sender, EventArgs e)
         {
-
+            //mController.doeiets()
         }
 
         private void raiseBidLabel_Click(object sender, EventArgs e)
         {
-
+            //mController.doeiets()
         }
     }
 }

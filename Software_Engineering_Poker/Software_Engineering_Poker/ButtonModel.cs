@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Software_Engineering_Poker
 {
-    class ButtonModel
+    public class ButtonModel
     {
     }
 }

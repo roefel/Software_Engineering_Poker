@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonController.cs" />
+    <Compile Include="ButtonModel.cs" />
     <Compile Include="ButtonUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
