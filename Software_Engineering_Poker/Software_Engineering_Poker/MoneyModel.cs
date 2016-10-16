@@ -24,5 +24,4 @@ namespace Software_Engineering_Poker
             }
         }
     }
-    }
 }
