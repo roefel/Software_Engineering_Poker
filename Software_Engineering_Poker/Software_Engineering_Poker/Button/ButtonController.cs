@@ -28,29 +28,14 @@ namespace Software_Engineering_Poker
             }
         }
 
-        public void BetAllIn()
-        {
-            // Controleer of de button vast is
-            if (!buttonModel.getVast)
-            {
-
-                // Update de view 
-                view.updateAllBtn();
-            }
-        }
-
         // Draai de 'isVast' waarde om wanneer er geklikt wordt
         public void toggleVast()
         {
             // Zeg tegen het model dat de teerling isVast waarde moet omgedraaid worden
             buttonModel.toggleVast();
 
-            //if(allBtn is geklikt)
-            // Update de view
-            view.updateAllBtn();
-
-            //if(raiseBtn is geklikt)
-            view.updateRaiseBtn();
+            //lock buttons until next round
+            view.lockBtns();
         }
 
         //Return de waarde die checkt of het vast staat of niet

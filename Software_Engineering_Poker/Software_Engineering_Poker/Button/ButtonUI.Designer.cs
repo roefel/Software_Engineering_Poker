@@ -31,9 +31,10 @@
             this.raiseBtn = new System.Windows.Forms.Button();
             this.foldBtn = new System.Windows.Forms.Button();
             this.allBtn = new System.Windows.Forms.Button();
-            this.bidRaiseTxtBox = new System.Windows.Forms.TextBox();
+            this.raiseBidTxtBox = new System.Windows.Forms.TextBox();
             this.callBtn = new System.Windows.Forms.Button();
             this.raiseBidLabel = new System.Windows.Forms.Label();
+            this.unlockBtnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // raiseBtn
@@ -72,14 +73,14 @@
             this.allBtn.UseVisualStyleBackColor = false;
             this.allBtn.Click += new System.EventHandler(this.allBtn_Click);
             // 
-            // bidRaiseTxtBox
+            // raiseBidTxtBox
             // 
-            this.bidRaiseTxtBox.Location = new System.Drawing.Point(49, 76);
-            this.bidRaiseTxtBox.Name = "bidRaiseTxtBox";
-            this.bidRaiseTxtBox.Size = new System.Drawing.Size(100, 20);
-            this.bidRaiseTxtBox.TabIndex = 9;
-            this.bidRaiseTxtBox.Text = "0 $";
-            this.bidRaiseTxtBox.TextChanged += new System.EventHandler(this.bidRaiseTxtBox_TextChanged);
+            this.raiseBidTxtBox.Location = new System.Drawing.Point(86, 74);
+            this.raiseBidTxtBox.Name = "raiseBidTxtBox";
+            this.raiseBidTxtBox.Size = new System.Drawing.Size(63, 20);
+            this.raiseBidTxtBox.TabIndex = 9;
+            this.raiseBidTxtBox.Text = "0 $";
+            this.raiseBidTxtBox.TextChanged += new System.EventHandler(this.raiseBidTxtBox_TextChanged);
             // 
             // callBtn
             // 
@@ -99,18 +100,29 @@
             this.raiseBidLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.raiseBidLabel.Location = new System.Drawing.Point(3, 74);
             this.raiseBidLabel.Name = "raiseBidLabel";
-            this.raiseBidLabel.Size = new System.Drawing.Size(40, 20);
+            this.raiseBidLabel.Size = new System.Drawing.Size(81, 20);
             this.raiseBidLabel.TabIndex = 11;
-            this.raiseBidLabel.Text = "Bid: ";
+            this.raiseBidLabel.Text = "Raise Bid:";
             this.raiseBidLabel.Click += new System.EventHandler(this.raiseBidLabel_Click);
+            // 
+            // unlockBtnTest
+            // 
+            this.unlockBtnTest.Location = new System.Drawing.Point(262, 74);
+            this.unlockBtnTest.Name = "unlockBtnTest";
+            this.unlockBtnTest.Size = new System.Drawing.Size(135, 40);
+            this.unlockBtnTest.TabIndex = 12;
+            this.unlockBtnTest.Text = "Temporary unlockBtnTest";
+            this.unlockBtnTest.UseVisualStyleBackColor = true;
+            this.unlockBtnTest.Click += new System.EventHandler(this.unlockBtnTest_Click);
             // 
             // ButtonUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.unlockBtnTest);
             this.Controls.Add(this.raiseBidLabel);
             this.Controls.Add(this.callBtn);
-            this.Controls.Add(this.bidRaiseTxtBox);
+            this.Controls.Add(this.raiseBidTxtBox);
             this.Controls.Add(this.allBtn);
             this.Controls.Add(this.foldBtn);
             this.Controls.Add(this.raiseBtn);
@@ -126,8 +138,9 @@
         private System.Windows.Forms.Button raiseBtn;
         private System.Windows.Forms.Button foldBtn;
         private System.Windows.Forms.Button allBtn;
-        private System.Windows.Forms.TextBox bidRaiseTxtBox;
+        private System.Windows.Forms.TextBox raiseBidTxtBox;
         private System.Windows.Forms.Button callBtn;
         private System.Windows.Forms.Label raiseBidLabel;
+        private System.Windows.Forms.Button unlockBtnTest;
     }
 }
