@@ -6,13 +6,34 @@ using System.Threading.Tasks;
 
 namespace Software_Engineering_Poker
 {
-    class MoneyController
+    public class MoneyController
     {
+        protected MoneyUI moneyUI;
 
-        public int calculateBalance()
+        protected MoneyModel moneyModel;
+
+        public MoneyController()
         {
-            return 0;
-        }
+            //create money model
+            moneyModel = new MoneyModel();
 
+            moneyUI = new MoneyUI(this);
+        }
+        //public int calculateBalance(int currentBalance)
+        //{
+        //    int amountBid = 50;
+        //    int newBalance = currentBalance - amountBid;
+        //    return newBalance;
+        //}
+
+        public MoneyUI view
+        {
+            get
+            {
+                return moneyUI;
+            }
+
+            
+        }
     }
 }

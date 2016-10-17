@@ -42,9 +42,12 @@
             //Create new instance of table
             TableController table = new TableController();
 
+            //Create new instance of MoneyUI
+            MoneyController money = new MoneyController();
+
             //Add table view to form
             this.Controls.Add(table.view);
-
+            this.Controls.Add(money.view);
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 

@@ -13,16 +13,24 @@ namespace Software_Engineering_Poker
     public partial class MoneyUI : UserControl
     {
         private MoneyController MoneyController;
+        //private MoneyModel moneyModel;
 
-        public MoneyUI()
+        public MoneyUI(MoneyController _moneyController)
+
         {
+            MoneyController = _moneyController;
             InitializeComponent();
         }
 
-        private void updateMoney()
-        {
-            int NewBalance = MoneyController.calculateBalance();
-        }
+        //private void updateMoney()
+        //{
+        //    int NewBalance = MoneyController.calculateBalance(moneyModel.CurrentPlayerBalance);
 
+        //}
+
+        //private void playerMoneyLabel_Click(object sender, EventArgs e)
+        //{
+        //    updateMoney();
+        //}
     }
 }
