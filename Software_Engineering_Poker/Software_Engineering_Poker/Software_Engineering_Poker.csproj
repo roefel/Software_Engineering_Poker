@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Button\ButtonController.cs" />
+    <Compile Include="Button\ButtonModel.cs" />
+    <Compile Include="Button\ButtonUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Button\ButtonUI.Designer.cs">
+      <DependentUpon>ButtonUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +78,9 @@
     <Compile Include="Table\TableUI.Designer.cs">
       <DependentUpon>TableUI.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Button\ButtonUI.resx">
+      <DependentUpon>ButtonUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

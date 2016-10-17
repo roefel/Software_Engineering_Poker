@@ -39,7 +39,14 @@
             this.Text = "Form1";
             this.ResumeLayout(false);
 
+            //create new instance of buttons
+            ButtonController button = new ButtonController();
+
+            //Add button view to form
+            this.Controls.Add(button.view);
+
             //Create new instance of table
+
             TableController table = new TableController();
 
             //Create new instance of MoneyUI
@@ -49,7 +56,7 @@
             this.Controls.Add(table.view);
             this.Controls.Add(money.view);
             this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;      
 
         }
 
