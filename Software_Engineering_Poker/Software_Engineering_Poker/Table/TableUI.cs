@@ -19,5 +19,7 @@ namespace Software_Engineering_Poker
             mController = controller;
             InitializeComponent();
         }
+        
+
     }
 }

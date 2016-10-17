@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace Software_Engineering_Poker
 {
-    class MoneyModel
+    public class MoneyModel
     {
-        private int _currentPlayerBalance;
-        private int _currentAI1Balance;
+        //private int _currentPlayerBalance = 1000;
+        //private int _currentAI1Balance;
 
-        public int CurrentPlayerBalance
-        {
-            get
-            {
-                return _currentPlayerBalance;
-            }
+        //public int CurrentPlayerBalance
+        //{
+        //    get
+        //    {
+        //        return _currentPlayerBalance;
+        //    }
 
-            set
-            {
-                _currentPlayerBalance = value;
-            }
-        }
+        //    set
+        //    {
+        //        _currentPlayerBalance = value;
+        //    }
+        //}
     }
 }
