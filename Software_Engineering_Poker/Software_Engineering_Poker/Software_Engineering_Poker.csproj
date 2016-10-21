@@ -54,12 +54,15 @@
     <Compile Include="ButtonContainer\ButtonContainerUI.Designer.cs">
       <DependentUpon>ButtonContainerUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComputerAI\ComputerAI.cs" />
+    <Compile Include="ComputerAI\ComputerAIController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameManager\GameController.cs" />
     <Compile Include="Money\MoneyController.cs" />
     <Compile Include="Money\MoneyModel.cs" />
     <Compile Include="Money\MoneyUI.cs">
