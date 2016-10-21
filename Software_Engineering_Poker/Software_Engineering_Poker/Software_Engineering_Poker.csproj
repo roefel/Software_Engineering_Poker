@@ -120,45 +120,6 @@
     <None Include="Resources\card.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\cards\hart-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\cards\hart-13.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="images\assets\circle.png" />
   </ItemGroup>
   <ItemGroup>
