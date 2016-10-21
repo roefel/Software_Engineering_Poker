@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Software_Engineering_Poker
 {
     public partial class ButtonContainerUI : UserControl
@@ -19,6 +20,9 @@ namespace Software_Engineering_Poker
         {
             mController = controller;
             InitializeComponent();
+            raiseBtn.Enabled = false;
+            raiseBtn.BackColor = System.Drawing.Color.LightGray;
+
             backupText = raiseBtn.Text;
         }
 
@@ -35,12 +39,16 @@ namespace Software_Engineering_Poker
         {
             //mController.doeiets()
             //mController.toggleVast();
+
+            mController.checkRaise();
         }
       
         private void raiseBidTxtBox_Leave(object sender, EventArgs e)
         {
             //Do your stuff
-            mController.toggleVast();
+            //mController.toggleVast();
+
+            mController.checkRaise();
         }
 
         private void raiseBidLabel_Click(object sender, EventArgs e)
@@ -100,18 +108,20 @@ namespace Software_Engineering_Poker
         //unlock at the start of a new round
         public void unlockBtns()
         {
-            raiseBtn.Enabled = true;
+            //raiseBtn.Enabled = true;
             callBtn.Enabled = true;
             foldBtn.Enabled = true;
             allBtn.Enabled = true;
             raiseBidTxtBox.Enabled = true;
 
-            raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
+            //raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
             callBtn.BackColor = System.Drawing.Color.LightSeaGreen;
             foldBtn.BackColor = System.Drawing.Color.Red;
             allBtn.BackColor = System.Drawing.Color.LimeGreen;
 
             raiseBtn.Text = backupText;
+
+            mController.checkRaise();
         }
     }
 }

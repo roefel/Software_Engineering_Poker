@@ -38,6 +38,33 @@ namespace Software_Engineering_Poker
             view.lockBtns();
         }
 
+        //check en update de raise Button door te kijken naar de value van de textbox
+        public void checkRaise()
+        {
+            if (ParseInt(ButtonContainerUI.raiseBidTxtBox.Text) > 0)
+            {
+                ButtonContainerUI.raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
+                ButtonContainerUI.raiseBtn.Enabled = true;
+            }
+
+            else
+            {
+                ButtonContainerUI.raiseBtn.BackColor = System.Drawing.Color.LightGray;
+                ButtonContainerUI.raiseBtn.Enabled = false;
+            }
+
+        }
+
+        //string input naar int
+        public static int ParseInt(string value)
+        {
+            int result = 0;
+
+            if (int.TryParse(value, out result)) return result;
+
+            else return 0;
+        }
+
         //Return de waarde die checkt of het vast staat of niet
         public bool getVast
         {

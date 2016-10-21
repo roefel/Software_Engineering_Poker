@@ -135,12 +135,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button raiseBtn;
-        private System.Windows.Forms.Button foldBtn;
-        private System.Windows.Forms.Button allBtn;
-        private System.Windows.Forms.TextBox raiseBidTxtBox;
-        private System.Windows.Forms.Button callBtn;
-        private System.Windows.Forms.Label raiseBidLabel;
-        private System.Windows.Forms.Button unlockBtnTest;
+        public System.Windows.Forms.Button raiseBtn;
+        public System.Windows.Forms.Button foldBtn;
+        public System.Windows.Forms.Button allBtn;
+        public System.Windows.Forms.TextBox raiseBidTxtBox;
+        public System.Windows.Forms.Button callBtn;
+        public System.Windows.Forms.Label raiseBidLabel;
+        public System.Windows.Forms.Button unlockBtnTest;
     }
 }
