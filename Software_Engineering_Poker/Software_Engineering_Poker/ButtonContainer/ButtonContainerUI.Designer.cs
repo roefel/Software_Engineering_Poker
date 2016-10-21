@@ -69,7 +69,7 @@
             this.allBtn.Name = "allBtn";
             this.allBtn.Size = new System.Drawing.Size(205, 117);
             this.allBtn.TabIndex = 8;
-            this.allBtn.Text = "All-In\n\n";
+            this.allBtn.Text = "All-In\n\n" + "(1500 $)";
             this.allBtn.UseVisualStyleBackColor = false;
             this.allBtn.Click += new System.EventHandler(this.allBtn_Click);
             // 
@@ -79,7 +79,7 @@
             this.raiseBidTxtBox.Name = "raiseBidTxtBox";
             this.raiseBidTxtBox.Size = new System.Drawing.Size(63, 20);
             this.raiseBidTxtBox.TabIndex = 9;
-            this.raiseBidTxtBox.Text = "0 $";
+            this.raiseBidTxtBox.Text = "0";
             this.raiseBidTxtBox.TextChanged += new System.EventHandler(this.raiseBidTxtBox_TextChanged);
             // 
             // callBtn
@@ -135,12 +135,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button raiseBtn;
-        private System.Windows.Forms.Button foldBtn;
-        private System.Windows.Forms.Button allBtn;
-        private System.Windows.Forms.TextBox raiseBidTxtBox;
-        private System.Windows.Forms.Button callBtn;
-        private System.Windows.Forms.Label raiseBidLabel;
-        private System.Windows.Forms.Button unlockBtnTest;
+        public System.Windows.Forms.Button raiseBtn;
+        public System.Windows.Forms.Button foldBtn;
+        public System.Windows.Forms.Button allBtn;
+        public System.Windows.Forms.TextBox raiseBidTxtBox;
+        public System.Windows.Forms.Button callBtn;
+        public System.Windows.Forms.Label raiseBidLabel;
+        public System.Windows.Forms.Button unlockBtnTest;
     }
 }
