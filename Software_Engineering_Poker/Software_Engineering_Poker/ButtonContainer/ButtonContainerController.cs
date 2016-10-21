@@ -46,7 +46,7 @@ namespace Software_Engineering_Poker
                 return ButtonContainerModel.getVast;
             }
         }
-
+        
         public int TotalMoney
         {
             get
