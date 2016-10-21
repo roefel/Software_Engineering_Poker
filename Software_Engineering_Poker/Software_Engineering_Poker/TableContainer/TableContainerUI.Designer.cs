@@ -1,6 +1,6 @@
 ﻿namespace Software_Engineering_Poker
 {
-    partial class TableUI
+    partial class TableContainerUI
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableContainerUI));
             this.tableBox = new System.Windows.Forms.GroupBox();
             this.tableMoneyValue = new System.Windows.Forms.Label();
             this.tableMoneyCircle = new System.Windows.Forms.PictureBox();
@@ -64,6 +65,8 @@
             // 
             // tableMoneyCircle
             // 
+            this.tableMoneyCircle.BackgroundImage = global::Software_Engineering_Poker.Properties.Resources.tableBackground;
+            this.tableMoneyCircle.Image = ((System.Drawing.Image)(resources.GetObject("tableMoneyCircle.Image")));
             this.tableMoneyCircle.ImageLocation = "Software_Engineering_Poker\\images\\assets\\circle.png";
             this.tableMoneyCircle.Location = new System.Drawing.Point(373, 119);
             this.tableMoneyCircle.Name = "tableMoneyCircle";
@@ -92,12 +95,12 @@
             this.computer1Card1.TabIndex = 0;
             this.computer1Card1.TabStop = false;
             // 
-            // TableUI
+            // TableContainerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableBox);
-            this.Name = "TableUI";
+            this.Name = "TableContainerUI";
             this.Size = new System.Drawing.Size(975, 408);
             this.tableBox.ResumeLayout(false);
             this.tableBox.PerformLayout();

@@ -49,7 +49,7 @@
 
             //Create new instance of table
 
-            TableController table = new TableController();
+            TableContainerController table = new TableContainerController();
 
             //Create new instance of MoneyUI
             MoneyController money = new MoneyController();

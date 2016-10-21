@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Software_Engineering_Poker
 {
-    public class TableModel
+    public class TableContainerModel
     {
         protected int mtableMoneyValue;
         protected Boolean mIsFixed;
 
-        public TableModel()
+        public TableContainerModel()
         {
             mtableMoneyValue = 0;
             mIsFixed = false;

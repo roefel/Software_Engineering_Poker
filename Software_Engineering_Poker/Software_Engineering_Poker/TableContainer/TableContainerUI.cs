@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Software_Engineering_Poker
 {
-    public partial class TableUI : UserControl
+    public partial class TableContainerUI : UserControl
     {
-        private TableController mController;
+        private TableContainerController mController;
 
-        public TableUI(TableController controller)
+        public TableContainerUI(TableContainerController controller)
         {
             mController = controller;
             InitializeComponent();

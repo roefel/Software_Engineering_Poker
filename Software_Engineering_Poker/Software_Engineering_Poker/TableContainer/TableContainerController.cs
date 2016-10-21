@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Software_Engineering_Poker
 {
-    public class TableController
+    public class TableContainerController
     {
-        protected TableUI tableUI;
-        protected TableModel tableModel;
+        protected TableContainerUI tableUI;
+        protected TableContainerModel tableModel;
 
-        public TableController()
+        public TableContainerController()
         {
             //create table model
-            tableModel = new TableModel();
+            tableModel = new TableContainerModel();
 
-            tableUI = new TableUI(this);
+            tableUI = new TableContainerUI(this);
         }
 
         //return instance of the view
-        public TableUI view
+        public TableContainerUI view
         {
             get
             {
