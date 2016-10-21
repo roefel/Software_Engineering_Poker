@@ -11,7 +11,7 @@ namespace Software_Engineering_Poker.GameManager
         private int _amountOfPlayers;  //constant number of amount of players/NPCs in the game
         bool[] playerTurn;     //array to indicate which player's turn it is. [0] is the player, [1] 1sth NPC and so on..     
         private int _numPlayerTurn;      //number to 'save' which player's turn it is.
-        private int _firstTurn;
+        private int firstTurn;
         private bool _isFirstTurn;
         //ComputerAI.ComputerAIController computerAI;
         Random rnd = new Random();
@@ -19,7 +19,6 @@ namespace Software_Engineering_Poker.GameManager
 
         void gameController()      //constructor
         {
-
             amountOfPlayers = 2;
             firstTurn = rnd.Next(amountOfPlayers);
             playerTurn = new bool[amountOfPlayers];
@@ -57,19 +56,24 @@ namespace Software_Engineering_Poker.GameManager
             {
                 playerTurn[i] = false;
             }
-            playerTurn[numPlayerTurn] = true; //sets the first players turn to true
+            playerTurn[numPlayerTurn] = true; //sets the first player's turn to true
+            
         }
 
+
+        //
+        //Properties
+        //
         public int numPlayerTurn
         {
             get
             {
-                return numPlayerTurn;
+                return _numPlayerTurn;
             }
 
             set
             {
-                numPlayerTurn = value;
+                _numPlayerTurn = value;
             }
         }
 
@@ -83,19 +87,6 @@ namespace Software_Engineering_Poker.GameManager
             set
             {
                 _amountOfPlayers = value;
-            }
-        }
-
-        public int firstTurn
-        {
-            get
-            {
-                return _firstTurn;
-            }
-
-            set
-            {
-                _firstTurn = value;
             }
         }
 
