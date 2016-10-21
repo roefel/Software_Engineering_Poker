@@ -57,6 +57,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 
+            //Organizing the view
             money.view.Left = 30;
             money.view.Top = 30;
             buttonContainer.view.Top = tableContainer.view.Height + 30;
