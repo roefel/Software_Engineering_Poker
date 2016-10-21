@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Software_Engineering_Poker
 {
-    public class ButtonModel
+    public class ButtonContainerModel
     {
         //money van moneyclass nodig?
         private int totalMoney;
         private int currentBid;
         private bool isVast;
 
-        public ButtonModel()
+        public ButtonContainerModel()
         {
             //placeholder
             isVast = false;

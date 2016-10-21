@@ -1,6 +1,6 @@
 ﻿namespace Software_Engineering_Poker
 {
-    partial class ButtonUI
+    partial class ButtonContainerUI
     {
         /// <summary> 
         /// Required designer variable.
@@ -115,7 +115,7 @@
             this.unlockBtnTest.UseVisualStyleBackColor = true;
             this.unlockBtnTest.Click += new System.EventHandler(this.unlockBtnTest_Click);
             // 
-            // ButtonUI
+            // ButtonContainerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,7 +126,7 @@
             this.Controls.Add(this.allBtn);
             this.Controls.Add(this.foldBtn);
             this.Controls.Add(this.raiseBtn);
-            this.Name = "ButtonUI";
+            this.Name = "ButtonContainerUI";
             this.Size = new System.Drawing.Size(776, 117);
             this.ResumeLayout(false);
             this.PerformLayout();

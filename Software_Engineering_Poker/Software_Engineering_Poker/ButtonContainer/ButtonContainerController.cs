@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace Software_Engineering_Poker
 {
-    public class ButtonController
+    public class ButtonContainerController
     {
-        protected ButtonUI buttonUI;
-        protected ButtonModel buttonModel;
+        protected ButtonContainerUI ButtonContainerUI;
+        protected ButtonContainerModel ButtonContainerModel;
 
-        public ButtonController()
+        public ButtonContainerController()
         {
-            //create button model
-            buttonModel = new ButtonModel();
+            //create ButtonContainer model
+            ButtonContainerModel = new ButtonContainerModel();
 
-            buttonUI = new ButtonUI(this);
+            ButtonContainerUI = new ButtonContainerUI(this);
         }
 
         //return instance of the view
-        public ButtonUI view
+        public ButtonContainerUI view
         {
             get
             {
-                return buttonUI;
+                return ButtonContainerUI;
             }
         }
 
@@ -32,9 +32,9 @@ namespace Software_Engineering_Poker
         public void toggleVast()
         {
             // Zeg tegen het model dat de teerling isVast waarde moet omgedraaid worden
-            buttonModel.toggleVast();
+            ButtonContainerModel.toggleVast();
 
-            //lock buttons until next round
+            //lock ButtonContainers until next round
             view.lockBtns();
         }
 
@@ -43,7 +43,7 @@ namespace Software_Engineering_Poker
         {
             get
             {
-                return buttonModel.getVast;
+                return ButtonContainerModel.getVast;
             }
         }
 
@@ -51,7 +51,7 @@ namespace Software_Engineering_Poker
         {
             get
             {
-                return buttonModel.TotalMoney;
+                return ButtonContainerModel.TotalMoney;
             }
         }
 
@@ -59,7 +59,7 @@ namespace Software_Engineering_Poker
         {
             get
             {
-                return buttonModel.CurrentBid;
+                return ButtonContainerModel.CurrentBid;
             }
         }
     }

@@ -39,13 +39,13 @@
             this.Text = "Form1";
             this.ResumeLayout(false);
 
-            //create new instance of buttons
-            ButtonController button = new ButtonController();
+            //create new instance of ButtonContainers
+            ButtonContainerController ButtonContainer = new ButtonContainerController();
 
-            button.view.Left = 500; 
+            ButtonContainer.view.Left = 500; 
 
-            //Add button view to form
-            this.Controls.Add(button.view);
+            //Add ButtonContainer view to form
+            this.Controls.Add(ButtonContainer.view);
 
             //Create new instance of table
 
