@@ -161,6 +161,45 @@
   <ItemGroup>
     <None Include="images\assets\circle.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\hart_13.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

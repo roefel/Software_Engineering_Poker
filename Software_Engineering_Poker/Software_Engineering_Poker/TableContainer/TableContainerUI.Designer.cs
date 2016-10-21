@@ -75,7 +75,7 @@
             // computer1Card2
             // 
             this.computer1Card2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.computer1Card2.ImageLocation = "Software_Engineering_Poker\\images\\cards\\hart-2.png";
+            this.computer1Card2.ImageLocation = "";
             this.computer1Card2.Location = new System.Drawing.Point(89, 19);
             this.computer1Card2.Name = "computer1Card2";
             this.computer1Card2.Size = new System.Drawing.Size(65, 80);
@@ -107,6 +107,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.computer1Card1)).EndInit();
             this.ResumeLayout(false);
 
+            //TEST CODE FOR DISPLAYING CARDS
+            computer1Card2.Image = Properties.Resources.hart_1;
+            computer1Card1.Image = Properties.Resources.hart_11;
         }
 
         #endregion
