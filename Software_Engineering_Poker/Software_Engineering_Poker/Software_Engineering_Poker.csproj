@@ -70,13 +70,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Table\TableController.cs" />
-    <Compile Include="Table\TableModel.cs" />
-    <Compile Include="Table\TableUI.cs">
+    <Compile Include="TableContainer\TableContainerController.cs" />
+    <Compile Include="TableContainer\TableContainerModel.cs" />
+    <Compile Include="TableContainer\TableContainerUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Table\TableUI.Designer.cs">
-      <DependentUpon>TableUI.cs</DependentUpon>
+    <Compile Include="TableContainer\TableContainerUI.Designer.cs">
+      <DependentUpon>TableContainerUI.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Button\ButtonUI.resx">
       <DependentUpon>ButtonUI.cs</DependentUpon>
@@ -97,8 +97,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Table\TableUI.resx">
-      <DependentUpon>TableUI.cs</DependentUpon>
+    <EmbeddedResource Include="TableContainer\TableContainerUI.resx">
+      <DependentUpon>TableContainerUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
