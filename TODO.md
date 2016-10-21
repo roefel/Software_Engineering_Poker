@@ -1,0 +1,3 @@
+- Array met kaarten
+- Random kaarten uitdelen aan spelers
+- Als speler/computer op 0 money staat ==> Mag niet meer spelen
