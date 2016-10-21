@@ -56,7 +56,7 @@ namespace Software_Engineering_Poker
         }
 
         //string input naar int
-        public static int ParseInt(string value)
+        public int ParseInt(string value)
         {
             int result = 0;
 

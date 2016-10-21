@@ -32,7 +32,8 @@ namespace Software_Engineering_Poker
             //raiseBtn.Enabled = false;
             mController.toggleVast();
             //raiseBtn.Text = raiseBtn.Text + " " + mController.CurrentBid.ToString() + " + " + raiseBidTxtBox.Text;
-            raiseBtn.Text = raiseBtn.Text + " +" + raiseBidTxtBox.Text + "$";
+            raiseBtn.Text = raiseBtn.Text + " +" + mController.ParseInt(raiseBidTxtBox.Text) + "$";
+            
         }
 
         private void raiseBidTxtBox_TextChanged(object sender, EventArgs e)
