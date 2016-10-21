@@ -42,6 +42,8 @@
             //create new instance of buttons
             ButtonController button = new ButtonController();
 
+            button.view.Left = 500; 
+
             //Add button view to form
             this.Controls.Add(button.view);
 
