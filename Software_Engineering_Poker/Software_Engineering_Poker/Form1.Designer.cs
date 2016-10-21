@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Windows Form Designer generated code and component initialisations
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -35,31 +35,35 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "PC Poker";
+            this.Text = "PC Poker";
             this.ResumeLayout(false);
 
             //create new instance of ButtonContainers
-            ButtonContainerController ButtonContainer = new ButtonContainerController();
-
-            ButtonContainer.view.Left = 500; 
+            ButtonContainerController buttonContainer = new ButtonContainerController();
 
             //Add ButtonContainer view to form
-            this.Controls.Add(ButtonContainer.view);
+            this.Controls.Add(buttonContainer.view);
 
             //Create new instance of table
 
-            TableContainerController table = new TableContainerController();
+            TableContainerController tableContainer = new TableContainerController();
 
             //Create new instance of MoneyUI
             MoneyController money = new MoneyController();
 
             //Add table view to form
-            this.Controls.Add(table.view);
+            this.Controls.Add(tableContainer.view);
             this.Controls.Add(money.view);
             this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;      
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 
+            money.view.Left = 30;
+            money.view.Top = 30;
+            buttonContainer.view.Top = tableContainer.view.Height + 30;
+            buttonContainer.view.Left = money.view.Width + 32;
+            tableContainer.view.Left = money.view.Width + 20;
+            tableContainer.view.Top = money.view.Top;
         }
 
         #endregion
