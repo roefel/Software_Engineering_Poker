@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableContainerUI));
             this.tableBox = new System.Windows.Forms.GroupBox();
             this.tableMoneyValue = new System.Windows.Forms.Label();
             this.tableMoneyCircle = new System.Windows.Forms.PictureBox();
@@ -66,7 +65,6 @@
             // tableMoneyCircle
             // 
             this.tableMoneyCircle.BackgroundImage = global::Software_Engineering_Poker.Properties.Resources.tableBackground;
-            this.tableMoneyCircle.Image = ((System.Drawing.Image)(resources.GetObject("tableMoneyCircle.Image")));
             this.tableMoneyCircle.ImageLocation = "Software_Engineering_Poker\\images\\assets\\circle.png";
             this.tableMoneyCircle.Location = new System.Drawing.Point(373, 119);
             this.tableMoneyCircle.Name = "tableMoneyCircle";
