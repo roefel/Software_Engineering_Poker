@@ -41,7 +41,7 @@
             // 
             // tableBox
             // 
-            this.tableBox.BackgroundImage = global::Software_Engineering_Poker.Properties.Resources.poker_table;
+            this.tableBox.BackgroundImage = global::Software_Engineering_Poker.Properties.Resources.tableBackground;
             this.tableBox.Controls.Add(this.tableMoneyValue);
             this.tableBox.Controls.Add(this.tableMoneyCircle);
             this.tableBox.Controls.Add(this.computer1Card2);
