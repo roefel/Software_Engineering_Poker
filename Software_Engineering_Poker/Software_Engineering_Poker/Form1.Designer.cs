@@ -39,14 +39,13 @@
             this.Text = "PC Poker";
             this.ResumeLayout(false);
 
-            //create new instance of ButtonContainers
+            //create new instance of buttonContainers
             ButtonContainerController buttonContainer = new ButtonContainerController();
 
             //Add ButtonContainer view to form
             this.Controls.Add(buttonContainer.view);
 
-            //Create new instance of table
-
+            //Create new instance of tableContainer
             TableContainerController tableContainer = new TableContainerController();
 
             //Create new instance of MoneyUI
