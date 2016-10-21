@@ -24,29 +24,21 @@ namespace Software_Engineering_Poker
         private void raiseBtn_Click(object sender, EventArgs e)
         {
             //mController.doeiets()
+            //raiseBtn.Enabled = false;
             mController.toggleVast();
+            raiseBtn.Text = raiseBtn.Text + " " + mController.CurrentBid.ToString() + " + " + raiseBidTxtBox.Text;
         }
 
-        private void allBtn_Click(object sender, EventArgs e)
+        private void raiseBidTxtBox_TextChanged(object sender, EventArgs e)
         {
             //mController.doeiets()
+            //mController.toggleVast();
+        }
+      
+        private void raiseBidTxtBox_Leave(object sender, EventArgs e)
+        {
+            //Do your stuff
             mController.toggleVast();
-        }
-
-        private void foldBtn_Click(object sender, EventArgs e)
-        {
-            //mController.doeiets()
-        }
-
-        private void bidRaiseTxtBox_TextChanged(object sender, EventArgs e)
-        {
-            //mController.doeiets()
-            mController.toggleVast();
-        }
-
-        private void callBtn_Click(object sender, EventArgs e)
-        {
-            //mController.doeiets()
         }
 
         private void raiseBidLabel_Click(object sender, EventArgs e)
@@ -54,17 +46,65 @@ namespace Software_Engineering_Poker
             //mController.doeiets()
         }
 
-        //update de view
-        public void updateAllBtn()
+        private void callBtn_Click(object sender, EventArgs e)
         {
-            allBtn.BackColor = (mController.getVast) ? Color.LightGray : default(Color);
+            //mController.doeiets()
+            mController.toggleVast();
+            //callBtn.Enabled = false;
+        }
+
+        private void foldBtn_Click(object sender, EventArgs e)
+        {
+            //mController.doeiets()
+            mController.toggleVast();
+            //foldBtn.Enabled = false;
+        }
+
+        private void allBtn_Click(object sender, EventArgs e)
+        {
+            //mController.doeiets()
+            mController.toggleVast();
+            //allBtn.Enabled = false;
             allBtn.Text = allBtn.Text + mController.TotalMoney.ToString() + " $";
         }
 
-        public void updateRaiseBtn()
+        private void unlockBtnTest_Click(object sender, EventArgs e)
         {
-            raiseBtn.BackColor = (mController.getVast) ? Color.LightGray : default(Color);
-            raiseBtn.Text = raiseBtn.Text + mController.CurrentBid.ToString() + " + " + bidRaiseTxtBox.Text;
+            unlockBtns();
+        }
+
+        //update de view
+        //lock until the round is over
+        public void lockBtns()
+        {
+            //raiseBtn.BackColor = (mController.getVast) ? Color.LightGray : Color.LimeGreen; 
+            //callBtn.BackColor = (mController.getVast) ? Color.LightGray : Color.LightSeaGreen;
+            //foldBtn.BackColor = (mController.getVast) ? Color.LightGray : Color.Red;
+            //allBtn.BackColor = (mController.getVast) ? Color.LightGray : Color.LimeGreen;
+
+            raiseBtn.BackColor = System.Drawing.Color.LightGray;
+            callBtn.BackColor = System.Drawing.Color.LightGray;
+            foldBtn.BackColor = System.Drawing.Color.LightGray;
+            allBtn.BackColor = System.Drawing.Color.LightGray;
+
+            raiseBtn.Enabled = false;
+            callBtn.Enabled = false;
+            foldBtn.Enabled = false;
+            allBtn.Enabled = false;
+        }
+
+        //unlock at the start of a new round
+        public void unlockBtns()
+        {
+            raiseBtn.Enabled = true;
+            callBtn.Enabled = true;
+            foldBtn.Enabled = true;
+            allBtn.Enabled = true;
+
+            raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
+            callBtn.BackColor = System.Drawing.Color.LightSeaGreen;
+            foldBtn.BackColor = System.Drawing.Color.Red;
+            allBtn.BackColor = System.Drawing.Color.LimeGreen;
         }
     }
 }
