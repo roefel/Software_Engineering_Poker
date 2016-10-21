@@ -161,6 +161,123 @@
   <ItemGroup>
     <None Include="images\cards\hart_13.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\klaver_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\ruit_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cards\schop_13.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
