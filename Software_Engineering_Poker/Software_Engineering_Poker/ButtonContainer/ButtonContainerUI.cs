@@ -29,26 +29,18 @@ namespace Software_Engineering_Poker
         private void raiseBtn_Click(object sender, EventArgs e)
         {
             //mController.doeiets()
-            //raiseBtn.Enabled = false;
             mController.toggleVast();
-            //raiseBtn.Text = raiseBtn.Text + " " + mController.CurrentBid.ToString() + " + " + raiseBidTxtBox.Text;
             raiseBtn.Text = raiseBtn.Text + " +" + mController.ParseInt(raiseBidTxtBox.Text) + "$";
             
         }
 
         private void raiseBidTxtBox_TextChanged(object sender, EventArgs e)
         {
-            //mController.doeiets()
-            //mController.toggleVast();
-
             mController.checkRaise();
         }
       
         private void raiseBidTxtBox_Leave(object sender, EventArgs e)
         {
-            //Do your stuff
-            //mController.toggleVast();
-
             mController.checkRaise();
         }
 
@@ -59,24 +51,17 @@ namespace Software_Engineering_Poker
 
         private void callBtn_Click(object sender, EventArgs e)
         {
-            //mController.doeiets()
             mController.toggleVast();
-            //callBtn.Enabled = false;
         }
 
         private void foldBtn_Click(object sender, EventArgs e)
         {
-            //mController.doeiets()
             mController.toggleVast();
-            //foldBtn.Enabled = false;
         }
 
         private void allBtn_Click(object sender, EventArgs e)
         {
-            //mController.doeiets()
             mController.toggleVast();
-            //allBtn.Enabled = false;
-            //allBtn.Text = allBtn.Text + mController.TotalMoney.ToString() + " $";
         }
 
         private void unlockBtnTest_Click(object sender, EventArgs e)
@@ -104,6 +89,8 @@ namespace Software_Engineering_Poker
             foldBtn.Enabled = false;
             allBtn.Enabled = false;
             raiseBidTxtBox.Enabled = false;
+
+            allBtn.Text = "All-In\n\n" + "(" + mController.TotalMoney + "$)";
         }
 
         //unlock at the start of a new round
@@ -121,6 +108,7 @@ namespace Software_Engineering_Poker
             allBtn.BackColor = System.Drawing.Color.LimeGreen;
 
             raiseBtn.Text = backupText;
+            allBtn.Text = "All-In\n\n" + "(" + mController.TotalMoney + "$)" ;
 
             mController.checkRaise();
         }
