@@ -8,7 +8,12 @@ namespace Software_Engineering_Poker
 {
     public class ButtonContainerModel
     {
+
+        private MoneyModel moneyModel;
+        //private TableContainerModel tableContainerModel;
+
         //money van moneyclass nodig?
+        //get van MoneyModel en dan plaatsen in de waardes hieronder?
         private int totalMoney;
         private int currentBid;
         private bool isVast;
@@ -21,7 +26,8 @@ namespace Software_Engineering_Poker
             currentBid = 500;
         }
 
-        //get en setter nodig?
+        //placeholder
+        // get en setter nodig?
 
         public int TotalMoney
         {
@@ -39,7 +45,20 @@ namespace Software_Engineering_Poker
             }
         }
 
-      // isVast veranderen naar niet vast
+        // van moneymodel
+        public int CurrentPlayerBalance
+        {
+            get
+            {
+                return moneyModel.CurrentPlayerBalance;
+            }
+            set
+            {
+                moneyModel.CurrentPlayerBalance = value;
+            }
+        }
+
+        // isVast veranderen naar niet vast
         public void toggleVast()
         {
             isVast = !isVast;
