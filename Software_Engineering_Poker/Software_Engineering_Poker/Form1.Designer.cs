@@ -61,7 +61,7 @@
             money.view.Left = 30;
             money.view.Top = 30;
             buttonContainer.view.Top = tableContainer.view.Height + 30;
-            buttonContainer.view.Left = money.view.Width + 32;
+            buttonContainer.view.Left = (money.view.Width + (tableContainer.view.Width/12)) + 32;
             tableContainer.view.Left = money.view.Width + 20;
             tableContainer.view.Top = money.view.Top;
         }
