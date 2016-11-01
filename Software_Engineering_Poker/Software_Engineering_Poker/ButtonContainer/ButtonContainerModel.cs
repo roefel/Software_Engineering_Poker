@@ -12,6 +12,19 @@ namespace Software_Engineering_Poker
         private MoneyModel moneyModel;
         //private TableContainerModel tableContainerModel;
 
+        // van moneymodel
+        //public int CurrentPlayerBalance
+        //{
+        //    get
+        //    {
+        //        return moneyModel.CurrentPlayerBalance;
+        //    }
+        //    set
+        //    {
+        //        moneyModel.CurrentPlayerBalance = value;
+        //    }
+        //}
+
         //money van moneyclass nodig?
         //get van MoneyModel en dan plaatsen in de waardes hieronder?
         private int totalMoney;
@@ -42,19 +55,6 @@ namespace Software_Engineering_Poker
             get
             {
                 return currentBid;
-            }
-        }
-
-        // van moneymodel
-        public int CurrentPlayerBalance
-        {
-            get
-            {
-                return moneyModel.CurrentPlayerBalance;
-            }
-            set
-            {
-                moneyModel.CurrentPlayerBalance = value;
             }
         }
 
