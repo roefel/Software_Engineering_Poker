@@ -8,15 +8,18 @@ namespace Software_Engineering_Poker
 {
     public class ButtonContainerController
     {
-        protected ButtonContainerUI ButtonContainerUI;
-        protected ButtonContainerModel ButtonContainerModel;
+        protected ButtonContainerUI buttonContainerUI;
+        protected ButtonContainerModel buttonContainerModel;
+        private GameManager.GameController gameController;
 
         public ButtonContainerController()
         {
             //create ButtonContainer model
-            ButtonContainerModel = new ButtonContainerModel();
+            buttonContainerModel = new ButtonContainerModel();
 
-            ButtonContainerUI = new ButtonContainerUI(this);
+            buttonContainerUI = new ButtonContainerUI(this);
+
+            gameController = new GameManager.GameController();
         }
 
         //return instance of the view
@@ -24,7 +27,7 @@ namespace Software_Engineering_Poker
         {
             get
             {
-                return ButtonContainerUI;
+                return buttonContainerUI;
             }
         }
 
@@ -32,7 +35,7 @@ namespace Software_Engineering_Poker
         public void toggleVast()
         {
             // Zeg tegen het model dat de teerling isVast waarde moet omgedraaid worden
-            ButtonContainerModel.toggleVast();
+            buttonContainerModel.toggleVast();
 
             //lock ButtonContainers until next round
             view.lockBtns();
@@ -41,22 +44,22 @@ namespace Software_Engineering_Poker
         //check en update de raise Button door te kijken naar de value van de textbox
         public void checkRaise()
         {
-            if (ParseInt(ButtonContainerUI.raiseBidTxtBox.Text) > 0)
+            if (ParseInt(buttonContainerUI.raiseBidTxtBox.Text) > 0)
             {
-                ButtonContainerUI.raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
-                ButtonContainerUI.raiseBtn.Enabled = true;
+                buttonContainerUI.raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
+                buttonContainerUI.raiseBtn.Enabled = true;
             }
 
             else
             {
-                ButtonContainerUI.raiseBtn.BackColor = System.Drawing.Color.LightGray;
-                ButtonContainerUI.raiseBtn.Enabled = false;
+                buttonContainerUI.raiseBtn.BackColor = System.Drawing.Color.LightGray;
+                buttonContainerUI.raiseBtn.Enabled = false;
             }
 
         }
 
         //string input naar int
-        public static int ParseInt(string value)
+        public int ParseInt(string value)
         {
             int result = 0;
 
@@ -70,7 +73,7 @@ namespace Software_Engineering_Poker
         {
             get
             {
-                return ButtonContainerModel.getVast;
+                return buttonContainerModel.getVast;
             }
         }
         
@@ -78,7 +81,7 @@ namespace Software_Engineering_Poker
         {
             get
             {
-                return ButtonContainerModel.TotalMoney;
+                return buttonContainerModel.TotalMoney;
             }
         }
 
@@ -86,8 +89,14 @@ namespace Software_Engineering_Poker
         {
             get
             {
-                return ButtonContainerModel.CurrentBid;
+                return buttonContainerModel.CurrentBid;
             }
+        }
+
+        //switch turn
+        public void switchTurn()
+        {
+            gameController.switchTurn();
         }
     }
 }

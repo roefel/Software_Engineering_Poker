@@ -13,69 +13,64 @@ namespace Software_Engineering_Poker
 {
     public partial class ButtonContainerUI : UserControl
     {
-        private ButtonContainerController mController;
+        private ButtonContainerController buttonContainerController;
+        //private GameManager.GameController gameController;
+        GameManager.GameController gamecontroller = new GameManager.GameController();
         string backupText;
 
         public ButtonContainerUI(ButtonContainerController controller)
         {
-            mController = controller;
+            buttonContainerController = controller;
             InitializeComponent();
             raiseBtn.Enabled = false;
             raiseBtn.BackColor = System.Drawing.Color.LightGray;
 
+            //allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$)";
+            allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$) \n zorgt voor error, turnSwitch in comment zetten";
             backupText = raiseBtn.Text;
         }
 
         private void raiseBtn_Click(object sender, EventArgs e)
         {
-            //mController.doeiets()
-            //raiseBtn.Enabled = false;
-            mController.toggleVast();
-            //raiseBtn.Text = raiseBtn.Text + " " + mController.CurrentBid.ToString() + " + " + raiseBidTxtBox.Text;
-            raiseBtn.Text = raiseBtn.Text + " +" + raiseBidTxtBox.Text + "$";
+            //buttonContainerController.doeiets()
+            buttonContainerController.toggleVast();
+            raiseBtn.Text = raiseBtn.Text + " +" + buttonContainerController.ParseInt(raiseBidTxtBox.Text) + "$";
+
+            //gameController.switchTurn();   
         }
 
         private void raiseBidTxtBox_TextChanged(object sender, EventArgs e)
         {
-            //mController.doeiets()
-            //mController.toggleVast();
-
-            mController.checkRaise();
+            buttonContainerController.checkRaise();
         }
       
         private void raiseBidTxtBox_Leave(object sender, EventArgs e)
         {
-            //Do your stuff
-            //mController.toggleVast();
-
-            mController.checkRaise();
+            buttonContainerController.checkRaise();
         }
 
         private void raiseBidLabel_Click(object sender, EventArgs e)
         {
-            //mController.doeiets()
+            //buttonContainerController.doeiets()
         }
 
         private void callBtn_Click(object sender, EventArgs e)
         {
-            //mController.doeiets()
-            mController.toggleVast();
-            //callBtn.Enabled = false;
+            buttonContainerController.toggleVast();
+            //buttonContainerController.switchTurn();
         }
 
         private void foldBtn_Click(object sender, EventArgs e)
         {
-            //mController.doeiets()
-            mController.toggleVast();
-            //foldBtn.Enabled = false;
+            buttonContainerController.toggleVast();
+            //buttonContainerController.switchTurn();
         }
 
         private void allBtn_Click(object sender, EventArgs e)
         {
-            //mController.doeiets()
-            mController.toggleVast();
-            //allBtn.Enabled = false;
-            //allBtn.Text = allBtn.Text + mController.TotalMoney.ToString() + " $";
+            buttonContainerController.toggleVast();
+            //buttonContainerController.switchTurn();
+            gamecontroller.switchTurn();
         }
 
         private void unlockBtnTest_Click(object sender, EventArgs e)
@@ -87,41 +82,50 @@ namespace Software_Engineering_Poker
         //lock until the round is over
         public void lockBtns()
         {
-            //raiseBtn.BackColor = (mController.getVast) ? Color.LightGray : Color.LimeGreen; 
-            //callBtn.BackColor = (mController.getVast) ? Color.LightGray : Color.LightSeaGreen;
-            //foldBtn.BackColor = (mController.getVast) ? Color.LightGray : Color.Red;
-            //allBtn.BackColor = (mController.getVast) ? Color.LightGray : Color.LimeGreen;
+            //if (gamecontroller.numPlayerTurn != 0)
+            //{ 
+                //raiseBtn.BackColor = (buttonContainerController.getVast) ? Color.LightGray : Color.LimeGreen; 
+                //callBtn.BackColor = (buttonContainerController.getVast) ? Color.LightGray : Color.LightSeaGreen;
+                //foldBtn.BackColor = (buttonContainerController.getVast) ? Color.LightGray : Color.Red;
+                //allBtn.BackColor = (buttonContainerController.getVast) ? Color.LightGray : Color.LimeGreen;
 
-            raiseBtn.BackColor = System.Drawing.Color.LightGray;
-            callBtn.BackColor = System.Drawing.Color.LightGray;
-            foldBtn.BackColor = System.Drawing.Color.LightGray;
-            allBtn.BackColor = System.Drawing.Color.LightGray;
-            //raiseBidTxtBox.BackColor = System.Drawing.Color.LightGray;
+                raiseBtn.BackColor = System.Drawing.Color.LightGray;
+                callBtn.BackColor = System.Drawing.Color.LightGray;
+                foldBtn.BackColor = System.Drawing.Color.LightGray;
+                allBtn.BackColor = System.Drawing.Color.LightGray;
+                //raiseBidTxtBox.BackColor = System.Drawing.Color.LightGray;
 
-            raiseBtn.Enabled = false;
-            callBtn.Enabled = false;
-            foldBtn.Enabled = false;
-            allBtn.Enabled = false;
-            raiseBidTxtBox.Enabled = false;
+                raiseBtn.Enabled = false;
+                callBtn.Enabled = false;
+                foldBtn.Enabled = false;
+                allBtn.Enabled = false;
+                raiseBidTxtBox.Enabled = false;
+
+                allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$)";
+            //}
         }
 
         //unlock at the start of a new round
         public void unlockBtns()
         {
-            //raiseBtn.Enabled = true;
-            callBtn.Enabled = true;
-            foldBtn.Enabled = true;
-            allBtn.Enabled = true;
-            raiseBidTxtBox.Enabled = true;
+            //if (gamecontroller.numPlayerTurn == 0)
+            //{ 
+                //raiseBtn.Enabled = true;
+                callBtn.Enabled = true;
+                foldBtn.Enabled = true;
+                allBtn.Enabled = true;
+                raiseBidTxtBox.Enabled = true;
 
-            //raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
-            callBtn.BackColor = System.Drawing.Color.LightSeaGreen;
-            foldBtn.BackColor = System.Drawing.Color.Red;
-            allBtn.BackColor = System.Drawing.Color.LimeGreen;
+                //raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
+                callBtn.BackColor = System.Drawing.Color.LightSeaGreen;
+                foldBtn.BackColor = System.Drawing.Color.Red;
+                allBtn.BackColor = System.Drawing.Color.LimeGreen;
 
-            raiseBtn.Text = backupText;
+                raiseBtn.Text = backupText;
+                allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$)" ;
 
-            mController.checkRaise();
+                buttonContainerController.checkRaise();
+            //}
         }
     }
 }
