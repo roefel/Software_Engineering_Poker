@@ -8,7 +8,14 @@ namespace Software_Engineering_Poker.ComputerAI
 {
     class ComputerAI
     {
+        public ComputerAI()
+        {
 
+        }
 
+        public static void aiTurnAlgorithm(int balance)
+        {
+
+        }
     }
 }

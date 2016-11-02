@@ -8,14 +8,13 @@ namespace Software_Engineering_Poker.GameManager
 {
     class GameController
     {
-        private int _amountOfPlayers;  //constant number of amount of players/NPCs in the game
+        private static int _amountOfPlayers;  //constant number of amount of players/NPCs in the game
         bool[] playerTurn; //array to indicate which player's turn it is. [0] is the player, [1] 1sth NPC and so on..     
         private int _numPlayerTurn;      //number to 'save' which player's turn it is.
         private int firstTurn;
         private bool _isFirstTurn;
-        //ComputerAI.ComputerAIController computerAI;
         Random rnd = new Random();
-
+        ComputerAI.ComputerAIController computerAI;
 
         public GameController()      //constructor
         {
@@ -30,7 +29,7 @@ namespace Software_Engineering_Poker.GameManager
         //method start() excecutes at the start of the application
         public void Start()
         {
-            
+            computerAI = new ComputerAI.ComputerAIController();
         }
         // method to switch the turn to the next player
         public void switchTurn()
@@ -45,8 +44,8 @@ namespace Software_Engineering_Poker.GameManager
 
             if (numPlayerTurn != 0)
             {
-                //numPlayerTurn = 1;
-
+                ComputerAI.ComputerAIController.aiNumberTurn = numPlayerTurn - 1;
+                ComputerAI.ComputerAIController.startTurn();
             }
         }
 
@@ -77,7 +76,7 @@ namespace Software_Engineering_Poker.GameManager
             }
         }
 
-        public int amountOfPlayers
+        public static int amountOfPlayers
         {
             get
             {
