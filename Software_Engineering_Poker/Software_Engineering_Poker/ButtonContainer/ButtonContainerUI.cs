@@ -26,7 +26,7 @@ namespace Software_Engineering_Poker
             raiseBtn.BackColor = System.Drawing.Color.LightGray;
 
             //allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$)";
-            allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$) \n\n zorgt voor een error";
+            allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$) \n zorgt voor error, turnSwitch in comment zetten";
             backupText = raiseBtn.Text;
         }
 
