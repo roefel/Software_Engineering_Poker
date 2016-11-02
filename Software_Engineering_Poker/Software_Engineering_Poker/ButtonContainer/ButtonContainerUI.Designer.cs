@@ -69,7 +69,7 @@
             this.allBtn.Name = "allBtn";
             this.allBtn.Size = new System.Drawing.Size(205, 117);
             this.allBtn.TabIndex = 8;
-            this.allBtn.Text = "All-In\n\n" + "(" + mController.TotalMoney + "$)";
+            this.allBtn.Text = "All-In";
             this.allBtn.UseVisualStyleBackColor = false;
             this.allBtn.Click += new System.EventHandler(this.allBtn_Click);
             // 
