@@ -110,6 +110,7 @@ namespace Software_Engineering_Poker
         }
 
         //unlock at the start of a new round
+        // if (gamecontroller.numPlayerTurn == 0)
         public void unlockBtns()
         {
                 //raiseBtn.Enabled = true;
