@@ -10,7 +10,8 @@ namespace Software_Engineering_Poker
     {
         protected ButtonContainerUI buttonContainerUI;
         protected ButtonContainerModel buttonContainerModel;
-        private GameManager.GameController gameController;
+        GameManager.GameController gameController;
+
 
         public ButtonContainerController()
         {
