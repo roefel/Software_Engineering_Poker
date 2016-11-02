@@ -35,7 +35,7 @@ namespace Software_Engineering_Poker
         // Draai de 'isVast' waarde om wanneer er geklikt wordt
         public void toggleVast()
         {
-            // Zeg tegen het model dat de teerling isVast waarde moet omgedraaid worden
+            // Zeg tegen het model dat de waarde moet omgedraaid worden
             buttonContainerModel.toggleVast();
 
             //lock ButtonContainers until next round
