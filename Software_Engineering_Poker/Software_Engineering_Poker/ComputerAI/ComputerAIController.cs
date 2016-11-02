@@ -8,15 +8,34 @@ namespace Software_Engineering_Poker.ComputerAI
 {
     class ComputerAIController
     {
-        GameManager.GameController gamecontroller = new GameManager.GameController();
+        static ComputerAI computerAI;
+        private static int _aiNumberTurn;
+        static MoneyModel money = new MoneyModel();
+        
 
-
-        void computerAIController()
+        public ComputerAIController()
         {
-            for (int i = 0; i < gamecontroller.amountOfPlayers-1; i++)
-            {
+            computerAI = new ComputerAI();
+            aiNumberTurn = 0;
+        }
 
+        public static void startTurn()
+        {
+            
+            ComputerAI.aiTurnAlgorithm(money.aiBalance[aiNumberTurn]);
+        }
+
+        public static int aiNumberTurn
+        {
+            get
+            {
+                return _aiNumberTurn;
             }
-        } 
+
+            set
+            {
+                _aiNumberTurn = value;
+            }
+        }
     }
 }
