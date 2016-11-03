@@ -39,7 +39,7 @@ namespace Software_Engineering_Poker
 
         private void raiseBtn_Click(object sender, EventArgs e)
         {
-            //buttonContainerController.doeiets()
+            buttonContainerController.raiseBet();
             buttonContainerController.toggleVast();
             raiseBtn.Text = raiseBtn.Text + " +" + buttonContainerController.ParseInt(raiseBidTxtBox.Text) + "$";
 
@@ -109,6 +109,7 @@ namespace Software_Engineering_Poker
             allBtn.Enabled = false;
             raiseBidTxtBox.Enabled = false;
 
+            callBtn.Text = "Call\n" + "(" + buttonContainerController.CurrentBid + "$)";
             allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$)";
         }
 
@@ -123,6 +124,7 @@ namespace Software_Engineering_Poker
             foldBtn.BackColor = System.Drawing.Color.Red;
 
             raiseBtn.Text = backupText;
+            callBtn.Text = "Call\n" + "(" + buttonContainerController.CurrentBid + "$)";
             allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$)" ;
 
             buttonContainerController.checkRaise();

@@ -10,8 +10,7 @@ namespace Software_Engineering_Poker
     {
         protected ButtonContainerUI buttonContainerUI;
         protected ButtonContainerModel buttonContainerModel;
-        //GameManager.GameController gameController;
-
+        MoneyModel moneyModel;
 
         public ButtonContainerController()
         {
@@ -20,7 +19,7 @@ namespace Software_Engineering_Poker
 
             buttonContainerUI = new ButtonContainerUI(this);
 
-            //gameController = new GameManager.GameController();
+            moneyModel = new MoneyModel();
         }
 
         //return instance of the view
@@ -45,7 +44,7 @@ namespace Software_Engineering_Poker
         //check en update de raise Button door te kijken naar de value van de textbox
         public void checkRaise()
         {
-            if (ParseInt(buttonContainerUI.raiseBidTxtBox.Text) > 0)
+            if ((ParseInt(buttonContainerUI.raiseBidTxtBox.Text) > 0) && (ParseInt(buttonContainerUI.raiseBidTxtBox.Text)<= TotalMoney) && (TotalMoney >= CurrentBid))
             {
                 buttonContainerUI.raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
                 buttonContainerUI.raiseBtn.Enabled = true;
@@ -91,9 +90,20 @@ namespace Software_Engineering_Poker
 
         }
 
+        public void raiseBet()
+        {
+            if ((ParseInt(buttonContainerUI.raiseBidTxtBox.Text) > 0) && (ParseInt(buttonContainerUI.raiseBidTxtBox.Text) <= TotalMoney))
+            {
+                TotalMoney = TotalMoney - (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
+                CurrentBid = CurrentBid + (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
+                moneyModel.currentPlayerBalance = TotalMoney;
+            }
+        }
+
         public void callBet()
         {
             TotalMoney = TotalMoney - CurrentBid;
+            moneyModel.currentPlayerBalance = TotalMoney;
         }
 
         //string input naar int
