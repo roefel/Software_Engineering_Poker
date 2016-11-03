@@ -59,6 +59,43 @@ namespace Software_Engineering_Poker
 
         }
 
+        public void checkCall()
+        {
+            if (TotalMoney >= CurrentBid)
+            {
+                buttonContainerUI.callBtn.BackColor = System.Drawing.Color.LightSeaGreen;
+                buttonContainerUI.callBtn.Enabled = true;
+            }
+
+            else
+            {
+                buttonContainerUI.callBtn.BackColor = System.Drawing.Color.LightGray;
+                buttonContainerUI.callBtn.Enabled = false;
+            }
+
+        }
+
+        public void checkAllIn()
+        {
+            if (TotalMoney > 0 && TotalMoney >= CurrentBid)
+            {
+                buttonContainerUI.allBtn.BackColor = System.Drawing.Color.LimeGreen;
+                buttonContainerUI.allBtn.Enabled = true;
+            }
+
+            else
+            {
+                buttonContainerUI.allBtn.BackColor = System.Drawing.Color.LightGray;
+                buttonContainerUI.allBtn.Enabled = false;
+            }
+
+        }
+
+        public void callBet()
+        {
+            TotalMoney = TotalMoney - CurrentBid;
+        }
+
         //string input naar int
         public int ParseInt(string value)
         {
@@ -84,6 +121,11 @@ namespace Software_Engineering_Poker
             {
                 return buttonContainerModel.TotalMoney;
             }
+
+            set
+            {
+                buttonContainerModel.TotalMoney = value;
+            }
         }
 
         public int CurrentBid
@@ -91,6 +133,11 @@ namespace Software_Engineering_Poker
             get
             {
                 return buttonContainerModel.CurrentBid;
+            }
+
+            set
+            {
+                buttonContainerModel.CurrentBid = value;
             }
         }
 

@@ -26,6 +26,7 @@ namespace Software_Engineering_Poker
             raiseBtn.BackColor = System.Drawing.Color.LightGray;
 
             allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$)";
+            callBtn.Text = "Call\n" + "(" + buttonContainerController.CurrentBid + "$)";
             backupText = raiseBtn.Text;
 
             // if it's not the player's turn when the game starts, lock the buttons
@@ -62,6 +63,8 @@ namespace Software_Engineering_Poker
 
         private void callBtn_Click(object sender, EventArgs e)
         {
+            buttonContainerController.checkCall();
+            buttonContainerController.callBet();
             buttonContainerController.toggleVast();
             gamecontroller.switchTurn();
         }
@@ -113,21 +116,18 @@ namespace Software_Engineering_Poker
         // if (gamecontroller.numPlayerTurn == 0)
         public void unlockBtns()
         {
-                //raiseBtn.Enabled = true;
-                callBtn.Enabled = true;
-                foldBtn.Enabled = true;
-                allBtn.Enabled = true;
-                raiseBidTxtBox.Enabled = true;
 
-                //raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
-                callBtn.BackColor = System.Drawing.Color.LightSeaGreen;
-                foldBtn.BackColor = System.Drawing.Color.Red;
-                allBtn.BackColor = System.Drawing.Color.LimeGreen;
+            raiseBidTxtBox.Enabled = true;
 
-                raiseBtn.Text = backupText;
-                allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$)" ;
+            foldBtn.Enabled = true;
+            foldBtn.BackColor = System.Drawing.Color.Red;
 
-                buttonContainerController.checkRaise();
+            raiseBtn.Text = backupText;
+            allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$)" ;
+
+            buttonContainerController.checkRaise();
+            buttonContainerController.checkCall();
+            buttonContainerController.checkAllIn();
         }
     }
 }
