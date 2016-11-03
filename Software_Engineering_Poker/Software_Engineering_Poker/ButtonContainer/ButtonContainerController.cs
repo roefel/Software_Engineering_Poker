@@ -10,7 +10,7 @@ namespace Software_Engineering_Poker
     {
         protected ButtonContainerUI buttonContainerUI;
         protected ButtonContainerModel buttonContainerModel;
-        GameManager.GameController gameController;
+        //GameManager.GameController gameController;
 
 
         public ButtonContainerController()
@@ -20,7 +20,7 @@ namespace Software_Engineering_Poker
 
             buttonContainerUI = new ButtonContainerUI(this);
 
-            gameController = new GameManager.GameController();
+            //gameController = new GameManager.GameController();
         }
 
         //return instance of the view
@@ -94,10 +94,10 @@ namespace Software_Engineering_Poker
             }
         }
 
-        //switch turn
-        public void switchTurn()
-        {
-            gameController.switchTurn();
-        }
+        ////switch turn
+        //public void switchTurn()
+        //{
+        //    gameController.switchTurn();
+        //}
     }
 }
