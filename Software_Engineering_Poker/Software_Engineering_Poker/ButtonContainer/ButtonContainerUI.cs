@@ -71,6 +71,7 @@ namespace Software_Engineering_Poker
 
         private void foldBtn_Click(object sender, EventArgs e)
         {
+            buttonContainerController.foldBet();
             buttonContainerController.toggleVast();
             gamecontroller.switchTurn();
         }
@@ -78,6 +79,7 @@ namespace Software_Engineering_Poker
         private void allBtn_Click(object sender, EventArgs e)
         {
             //if (gamecontroller.numPlayerTurn != 0){}
+            buttonContainerController.allInBet();
             buttonContainerController.toggleVast();
             gamecontroller.switchTurn();
         }
@@ -92,16 +94,10 @@ namespace Software_Engineering_Poker
         //lock until the round is over
         public void lockBtns()
         {            
-            //raiseBtn.BackColor = (buttonContainerController.getVast) ? Color.LightGray : Color.LimeGreen; 
-            //callBtn.BackColor = (buttonContainerController.getVast) ? Color.LightGray : Color.LightSeaGreen;
-            //foldBtn.BackColor = (buttonContainerController.getVast) ? Color.LightGray : Color.Red;
-            //allBtn.BackColor = (buttonContainerController.getVast) ? Color.LightGray : Color.LimeGreen;
-
             raiseBtn.BackColor = System.Drawing.Color.LightGray;
             callBtn.BackColor = System.Drawing.Color.LightGray;
             foldBtn.BackColor = System.Drawing.Color.LightGray;
             allBtn.BackColor = System.Drawing.Color.LightGray;
-            //raiseBidTxtBox.BackColor = System.Drawing.Color.LightGray;
 
             raiseBtn.Enabled = false;
             callBtn.Enabled = false;
@@ -117,15 +113,12 @@ namespace Software_Engineering_Poker
         // if (gamecontroller.numPlayerTurn == 0)
         public void unlockBtns()
         {
-
             raiseBidTxtBox.Enabled = true;
+            raiseBtn.Text = backupText;
 
+            //unlock fold button
             foldBtn.Enabled = true;
             foldBtn.BackColor = System.Drawing.Color.Red;
-
-            raiseBtn.Text = backupText;
-            callBtn.Text = "Call\n" + "(" + buttonContainerController.CurrentBid + "$)";
-            allBtn.Text = "All-In\n\n" + "(" + buttonContainerController.TotalMoney + "$)" ;
 
             buttonContainerController.checkRaise();
             buttonContainerController.checkCall();
