@@ -9,13 +9,13 @@ namespace Software_Engineering_Poker
     public class MoneyModel
     {
         private int _currentPlayerBalance;
-        private int[] _aiBalance = new int[1];
+        private static int[] _aiBalance = new int[1];
 
 
         public MoneyModel()
         {
-            aiBalance[0] = 50;
-            currentPlayerBalance = 50;
+            aiBalance[0] = 100;
+            currentPlayerBalance = 100;
         }
 
         public int currentPlayerBalance
@@ -31,7 +31,7 @@ namespace Software_Engineering_Poker
             }
         }
 
-        public int[] aiBalance
+        public static int[] aiBalance
         {
             get
             {

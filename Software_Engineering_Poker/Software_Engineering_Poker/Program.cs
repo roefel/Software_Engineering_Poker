@@ -17,7 +17,6 @@ namespace Software_Engineering_Poker
         [STAThread]
         static void Main()
         {
-            Console.WriteLine("starting from program");
             controller = new GameManager.GameController();
             controller.Start();
             Application.EnableVisualStyles();
