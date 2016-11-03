@@ -8,40 +8,26 @@ namespace Software_Engineering_Poker
 {
     public class ButtonContainerModel
     {
-
-        private MoneyModel moneyModel;
-        //private TableContainerModel tableContainerModel;
-
-        // van moneymodel
-        //public int CurrentPlayerBalance
-        //{
-        //    get
-        //    {
-        //        return moneyModel.CurrentPlayerBalance;
-        //    }
-        //    set
-        //    {
-        //        moneyModel.CurrentPlayerBalance = value;
-        //    }
-        //}
-
         //money van moneyclass nodig?
-        //get van MoneyModel en dan plaatsen in de waardes hieronder?
+        //get van MoneyModel en dan plaatsen in de waardes hieronder
+        private MoneyModel moneyModel;
         private int totalMoney;
         private int currentBid;
+
         private bool isVast;
 
         public ButtonContainerModel()
         {
+            moneyModel = new MoneyModel();
+            totalMoney = moneyModel.currentPlayerBalance;
+
             //placeholder
+            //totalMoney = 2000;
             isVast = false;
-            totalMoney = 2000;
             currentBid = 500;
         }
 
-        //placeholder
-        // get en setter nodig?
-
+        // get en setter
         public int TotalMoney
         {
             get
