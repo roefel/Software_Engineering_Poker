@@ -10,7 +10,7 @@ namespace Software_Engineering_Poker
     {
         protected ButtonContainerUI buttonContainerUI;
         protected ButtonContainerModel buttonContainerModel;
-        //GameManager.GameController gameController;
+        GameManager.GameController gameController;
         MoneyModel moneyModel;
 
         public ButtonContainerController()
@@ -20,6 +20,7 @@ namespace Software_Engineering_Poker
 
             buttonContainerUI = new ButtonContainerUI(this);
 
+            gameController = new GameManager.GameController();
             moneyModel = new MoneyModel();
         }
 
@@ -74,7 +75,6 @@ namespace Software_Engineering_Poker
                 buttonContainerUI.callBtn.Enabled = false;
                 buttonContainerUI.callBtn.Text = "Call\n" + "(" + CurrentBid + "$)";
             }
-
         }
 
         public void checkAllIn()
@@ -92,7 +92,6 @@ namespace Software_Engineering_Poker
                 buttonContainerUI.allBtn.Enabled = false;
                 buttonContainerUI.allBtn.Text = "All-In\n\n" + "(" + TotalMoney + "$)";
             }
-
         }
 
         public void raiseBet()
@@ -101,7 +100,11 @@ namespace Software_Engineering_Poker
             {
                 TotalMoney = TotalMoney - (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
                 CurrentBid = CurrentBid + (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
+
                 moneyModel.currentPlayerBalance = TotalMoney;
+                //moneyModel.currentBid = CurrentBid;
+
+                gameController.switchTurn();
             }
         }
 
@@ -109,11 +112,17 @@ namespace Software_Engineering_Poker
         {
             TotalMoney = TotalMoney - CurrentBid;
             moneyModel.currentPlayerBalance = TotalMoney;
+            //moneyModel.currentBid = CurrentBid;
+
+            gameController.switchTurn();
         }
 
         public void foldBet()
         {
             moneyModel.currentPlayerBalance = TotalMoney;
+            //moneyModel.currentBid = CurrentBid;
+
+            gameController.switchTurn();
         }
 
         public void allInBet()
@@ -121,6 +130,9 @@ namespace Software_Engineering_Poker
             CurrentBid = TotalMoney;
             TotalMoney = 0;
             moneyModel.currentPlayerBalance = TotalMoney;
+            //moneyModel.currentBid = CurrentBid;
+
+            gameController.switchTurn();
         }
 
         //string input naar int
@@ -168,10 +180,10 @@ namespace Software_Engineering_Poker
             }
         }
 
-        ////switch turn
-        //public void switchTurn()
-        //{
-        //    gameController.switchTurn();
-        //}
+        //switch turn
+        public void switchTurn()
+        {
+            gameController.switchTurn();
+        }
     }
 }
