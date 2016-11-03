@@ -15,7 +15,7 @@ namespace Software_Engineering_Poker
     {
         private ButtonContainerController buttonContainerController;
         //private GameManager.GameController gameController;
-        GameManager.GameController gamecontroller = Program.controller;
+        GameManager.GameController gamecontroller =  Program.controller;
         string backupText;
 
         public ButtonContainerUI(ButtonContainerController controller)
