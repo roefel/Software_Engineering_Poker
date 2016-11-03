@@ -10,7 +10,7 @@ namespace Software_Engineering_Poker
     {
         protected ButtonContainerUI buttonContainerUI;
         protected ButtonContainerModel buttonContainerModel;
-        //GameManager.GameController gameController;
+        GameManager.GameController gameController;
 
         public ButtonContainerController()
         {
@@ -19,11 +19,8 @@ namespace Software_Engineering_Poker
 
             buttonContainerUI = new ButtonContainerUI(this);
 
-<<<<<<< HEAD
             gameController = Program.controller;
-=======
-            //gameController = new GameManager.GameController();
->>>>>>> refs/remotes/origin/master
+
         }
 
         //return instance of the view
