@@ -8,13 +8,14 @@ namespace Software_Engineering_Poker
 {
     public class MoneyModel
     {
-        private int _currentPlayerBalance = 1000;
+        private int _currentPlayerBalance;
         private int[] _aiBalance = new int[1];
 
 
         public MoneyModel()
         {
             aiBalance[0] = 50;
+            currentPlayerBalance = 50;
         }
 
         public int currentPlayerBalance

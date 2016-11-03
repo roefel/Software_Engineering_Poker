@@ -21,7 +21,7 @@ namespace Software_Engineering_Poker.ComputerAI
 
         public static void startTurn()
         {
-            
+            Console.WriteLine("aiNumberTurn= " + aiNumberTurn);
             ComputerAI.aiTurnAlgorithm(money.aiBalance[aiNumberTurn]);
         }
 
