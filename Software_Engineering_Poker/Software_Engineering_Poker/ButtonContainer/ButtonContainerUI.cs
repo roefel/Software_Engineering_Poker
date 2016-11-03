@@ -42,7 +42,7 @@ namespace Software_Engineering_Poker
             buttonContainerController.toggleVast();
             raiseBtn.Text = raiseBtn.Text + " +" + buttonContainerController.ParseInt(raiseBidTxtBox.Text) + "$";
 
-            buttonContainerController.switchTurn();
+            gamecontroller.switchTurn();
         }
 
         private void raiseBidTxtBox_TextChanged(object sender, EventArgs e)
@@ -63,20 +63,20 @@ namespace Software_Engineering_Poker
         private void callBtn_Click(object sender, EventArgs e)
         {
             buttonContainerController.toggleVast();
-            buttonContainerController.switchTurn();
+            gamecontroller.switchTurn();
         }
 
         private void foldBtn_Click(object sender, EventArgs e)
         {
             buttonContainerController.toggleVast();
-            buttonContainerController.switchTurn();
+            gamecontroller.switchTurn();
         }
 
         private void allBtn_Click(object sender, EventArgs e)
         {
             //if (gamecontroller.numPlayerTurn != 0){}
             buttonContainerController.toggleVast();
-            buttonContainerController.switchTurn();
+            gamecontroller.switchTurn();
         }
 
         private void unlockBtnTest_Click(object sender, EventArgs e)
