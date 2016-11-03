@@ -78,6 +78,7 @@ namespace Software_Engineering_Poker
         private void allBtn_Click(object sender, EventArgs e)
         {
             //if (gamecontroller.numPlayerTurn != 0){}
+            buttonContainerController.allInBet();
             buttonContainerController.toggleVast();
             gamecontroller.switchTurn();
         }

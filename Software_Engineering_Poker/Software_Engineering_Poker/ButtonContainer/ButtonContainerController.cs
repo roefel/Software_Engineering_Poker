@@ -107,6 +107,13 @@ namespace Software_Engineering_Poker
             moneyModel.currentPlayerBalance = TotalMoney;
         }
 
+        public void allInBet()
+        {
+            CurrentBid = TotalMoney;
+            TotalMoney = 0;
+            moneyModel.currentPlayerBalance = TotalMoney;
+        }
+
         //string input naar int
         public int ParseInt(string value)
         {
