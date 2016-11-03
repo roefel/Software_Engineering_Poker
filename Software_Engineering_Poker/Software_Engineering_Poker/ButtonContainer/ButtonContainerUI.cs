@@ -15,7 +15,7 @@ namespace Software_Engineering_Poker
     {
         private ButtonContainerController buttonContainerController;
         //private GameManager.GameController gameController;
-        GameManager.GameController gamecontroller = new GameManager.GameController();
+        GameManager.GameController gamecontroller = Program.controller;
         string backupText;
 
         public ButtonContainerUI(ButtonContainerController controller)
@@ -81,7 +81,7 @@ namespace Software_Engineering_Poker
 
         private void unlockBtnTest_Click(object sender, EventArgs e)
         {
-            gamecontroller.numPlayerTurn = 0;
+            //gamecontroller.numPlayerTurn = 0;
             unlockBtns();
         }
 

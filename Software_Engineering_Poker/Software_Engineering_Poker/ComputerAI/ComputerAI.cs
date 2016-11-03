@@ -15,6 +15,7 @@ namespace Software_Engineering_Poker.ComputerAI
 
         public static void aiTurnAlgorithm(int balance)
         {
+            Console.WriteLine("my turn");
 
         }
     }

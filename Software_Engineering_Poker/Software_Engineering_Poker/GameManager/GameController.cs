@@ -18,12 +18,14 @@ namespace Software_Engineering_Poker.GameManager
 
         public GameController()      //constructor
         {
-            amountOfPlayers = 2;
+            Console.WriteLine("starting GameController");
+            amountOfPlayers = 2;  //als je dit getal aanpast ook de array in moneymodel aanpassen, voorlopig hardcoded
             playerTurn = new bool[amountOfPlayers];
             firstTurn = rnd.Next(amountOfPlayers);
             numPlayerTurn = firstTurn;
             switchTurn();
             startFirstTurn();
+
         }
 
         //method start() excecutes at the start of the application
@@ -39,6 +41,7 @@ namespace Software_Engineering_Poker.GameManager
             if (numPlayerTurn == amountOfPlayers)
             {
                 numPlayerTurn = 0;
+                Console.WriteLine("your turn");
             }
             playerTurn[numPlayerTurn] = true;
 
@@ -46,6 +49,7 @@ namespace Software_Engineering_Poker.GameManager
             {
                 ComputerAI.ComputerAIController.aiNumberTurn = numPlayerTurn - 1;
                 ComputerAI.ComputerAIController.startTurn();
+
             }
         }
 
