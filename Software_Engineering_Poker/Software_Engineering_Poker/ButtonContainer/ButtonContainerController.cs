@@ -65,12 +65,14 @@ namespace Software_Engineering_Poker
             {
                 buttonContainerUI.callBtn.BackColor = System.Drawing.Color.LightSeaGreen;
                 buttonContainerUI.callBtn.Enabled = true;
+                buttonContainerUI.callBtn.Text = "Call\n" + "(" + CurrentBid + "$)";
             }
 
             else
             {
                 buttonContainerUI.callBtn.BackColor = System.Drawing.Color.LightGray;
                 buttonContainerUI.callBtn.Enabled = false;
+                buttonContainerUI.callBtn.Text = "Call\n" + "(" + CurrentBid + "$)";
             }
 
         }
@@ -81,12 +83,14 @@ namespace Software_Engineering_Poker
             {
                 buttonContainerUI.allBtn.BackColor = System.Drawing.Color.LimeGreen;
                 buttonContainerUI.allBtn.Enabled = true;
+                buttonContainerUI.allBtn.Text = "All-In\n\n" + "(" + TotalMoney + "$)";
             }
 
             else
             {
                 buttonContainerUI.allBtn.BackColor = System.Drawing.Color.LightGray;
                 buttonContainerUI.allBtn.Enabled = false;
+                buttonContainerUI.allBtn.Text = "All-In\n\n" + "(" + TotalMoney + "$)";
             }
 
         }
@@ -104,6 +108,11 @@ namespace Software_Engineering_Poker
         public void callBet()
         {
             TotalMoney = TotalMoney - CurrentBid;
+            moneyModel.currentPlayerBalance = TotalMoney;
+        }
+
+        public void foldBet()
+        {
             moneyModel.currentPlayerBalance = TotalMoney;
         }
 
