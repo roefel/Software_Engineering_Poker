@@ -40,10 +40,9 @@ namespace Software_Engineering_Poker
             cardsChecked = 0;
             cardNumbers = getCardNumber(cards);
 
-
-
-            if (royalFlush()) { Console.WriteLine(royalFlush()); return 110; }
-            else if (fourOfAKind()) { return 100; }
+            Console.WriteLine(fourOfAKind());
+            //if (royalFlush()) {  return 110; }
+            if (fourOfAKind()) { return 100; }
             else if (fullHouse()) { return 90; }
             else if (straight()) { return 80; }
             else if (threeOfAKind()) { return 70; }
@@ -67,7 +66,7 @@ namespace Software_Engineering_Poker
             if(int.TryParse(cards[cardsChecked], out number[cardsChecked]))
             {
                 if(number[cardsChecked] == 1) { number[cardsChecked] = 14; }
-                Console.WriteLine("cards checked" + cardsChecked);
+                //Console.WriteLine("cards checked" + cardsChecked);
                 cardsChecked++;
             }
             else
@@ -121,37 +120,67 @@ namespace Software_Engineering_Poker
             return type;
         }
 
-        private bool royalFlush()
+        //bool IsSequential(int[] array)
+        //{
+        //    return array.Zip(array.Skip(1), (a, b) => (a + 1) == b).All(x => x);
+        //}
+
+        //private bool royalFlush()
+        //{
+        //    var result = cardTypes.GroupBy(i => i)
+        //        .Select(g => new { Value = g.Key, Count = g.Count() })
+        //        .Where(x => x.Count > 1)
+        //        .ToList();
+
+        //    foreach (var pair in result)
+        //    {
+        //        if( pair.Count >= 5)
+        //        {
+
+        //            if (IsSequential(cardNumbers))
+        //            {
+        //                return true;
+        //            }
+
+        //            else
+        //            {
+        //                return false;
+        //            }
+
+
+
+
+        //        }
+        //        else
+        //        {
+        //            return false;
+                    
+        //        }
+        //    }
+        //    return false;
+
+        //}
+
+        private bool fourOfAKind()
         {
-            var result = cardTypes.GroupBy(i => i)
+            var result = cardNumbers.GroupBy(i => i)
                 .Select(g => new { Value = g.Key, Count = g.Count() })
                 .Where(x => x.Count > 1)
                 .ToList();
 
             foreach (var pair in result)
             {
-                if( pair.Count >= 5)
+                if(pair.Count == 4)
                 {
-                    int[] royalFlush = cardNumbers;
-                    Array.Sort(royalFlush);
                     return true;
-                    
-                    
-
                 }
                 else
                 {
                     return false;
-                    
                 }
+
             }
-            return false;
-
-        }
-
-        private bool fourOfAKind()
-        {
-            return false;
+                return true;
         }
 
         private bool fullHouse()

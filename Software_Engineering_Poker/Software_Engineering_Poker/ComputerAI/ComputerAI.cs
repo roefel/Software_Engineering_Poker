@@ -23,7 +23,7 @@ namespace Software_Engineering_Poker.ComputerAI
         public static void aiTurnAlgorithm(int balance, int round)
         {
             Console.WriteLine("my turn");
-            calculator.calculatePoints( "hart_10", "k1", "h1", "s1", "s1", "r1", "h1");
+            calculator.calculatePoints( "hart_10", "k1", "h1", "h2", "h1", "r1", "h1");
             if (folded || balance < MoneyModel.currentBid)
             {
                 folded = true;
