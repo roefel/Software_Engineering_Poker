@@ -17,7 +17,7 @@ namespace Software_Engineering_Poker
         {
             //moneyModel = new MoneyModel();
             mtableMoneyBid = MoneyModel.currentBid;
-            mtableMoneyValue = 1000;
+            mtableMoneyValue = MoneyModel.tableMoney;
             //mtableMoneyValue = 0;
             mIsFixed = false;
         }

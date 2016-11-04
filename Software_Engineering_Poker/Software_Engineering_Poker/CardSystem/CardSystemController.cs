@@ -58,7 +58,6 @@ namespace Software_Engineering_Poker
                 Console.WriteLine("Generated card: " + card);
             }
             
-            
             //cardSystemUI.dealerCard2.Image = Properties.Resources.hart_10;
             //return card;
 
@@ -67,15 +66,8 @@ namespace Software_Engineering_Poker
 
         public void UpdateTableTxt()
         {
-            //cardSystemUI.tableMoneyValue.Text = "haha";
-
             cardSystemUI.currentBidLabel.Text = "currentBid:" + MoneyModel.currentBid + "$";
-
-            TableMoneyValue = TableMoneyValue + MoneyModel.currentBid;
-            cardSystemUI.tableMoneyValue.Text = TableMoneyValue + "$";
-
-            Console.WriteLine("currentBid= " + MoneyModel.currentBid + "$");
-            Console.WriteLine("tablemoney= " + (tableModel.TableMoneyValue) + "$");
+            cardSystemUI.tableMoneyValue.Text = MoneyModel.tableMoney + "$";
         }
 
         public int TableMoneyValue

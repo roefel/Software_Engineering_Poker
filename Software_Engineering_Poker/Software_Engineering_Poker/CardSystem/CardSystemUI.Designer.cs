@@ -31,7 +31,7 @@
             this.tableBox = new System.Windows.Forms.GroupBox();
             this.randomCardGen = new System.Windows.Forms.Button();
             this.currentBidLabel = new System.Windows.Forms.Label();
-            this.currentBidBtn = new System.Windows.Forms.Button();
+            this.updateTableBtn = new System.Windows.Forms.Button();
             this.playerPointer = new System.Windows.Forms.PictureBox();
             this.computer3Pointer = new System.Windows.Forms.PictureBox();
             this.computer2Pointer = new System.Windows.Forms.PictureBox();
@@ -75,7 +75,7 @@
             this.tableBox.BackgroundImage = global::Software_Engineering_Poker.Properties.Resources.tableBackground;
             this.tableBox.Controls.Add(this.randomCardGen);
             this.tableBox.Controls.Add(this.currentBidLabel);
-            this.tableBox.Controls.Add(this.currentBidBtn);
+            this.tableBox.Controls.Add(this.updateTableBtn);
             this.tableBox.Controls.Add(this.playerPointer);
             this.tableBox.Controls.Add(this.computer3Pointer);
             this.tableBox.Controls.Add(this.computer2Pointer);
@@ -121,15 +121,15 @@
             this.currentBidLabel.Text = "CurrentBid: ";
             this.currentBidLabel.Click += new System.EventHandler(this.currentBidLabel_Click);
             // 
-            // currentBidBtn
+            // updateTableBtn
             // 
-            this.currentBidBtn.Location = new System.Drawing.Point(400, 279);
-            this.currentBidBtn.Name = "currentBidBtn";
-            this.currentBidBtn.Size = new System.Drawing.Size(136, 30);
-            this.currentBidBtn.TabIndex = 1;
-            this.currentBidBtn.Text = "update the table TEST";
-            this.currentBidBtn.UseVisualStyleBackColor = true;
-            this.currentBidBtn.Click += new System.EventHandler(this.currentBidBtn_Click);
+            this.updateTableBtn.Location = new System.Drawing.Point(400, 279);
+            this.updateTableBtn.Name = "updateTableBtn";
+            this.updateTableBtn.Size = new System.Drawing.Size(136, 30);
+            this.updateTableBtn.TabIndex = 1;
+            this.updateTableBtn.Text = "update the table TEST";
+            this.updateTableBtn.UseVisualStyleBackColor = true;
+            this.updateTableBtn.Click += new System.EventHandler(this.currentBidBtn_Click);
             // 
             // playerPointer
             // 
@@ -389,7 +389,7 @@
         public System.Windows.Forms.PictureBox computer2Pointer;
         public System.Windows.Forms.PictureBox playerPointer;
         public System.Windows.Forms.PictureBox computer3Pointer;
-        public System.Windows.Forms.Button currentBidBtn;
+        public System.Windows.Forms.Button updateTableBtn;
         public System.Windows.Forms.Label currentBidLabel;
         public System.Windows.Forms.Button randomCardGen;
     }
