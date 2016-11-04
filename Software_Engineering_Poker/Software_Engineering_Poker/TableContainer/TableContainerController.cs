@@ -10,10 +10,12 @@ namespace Software_Engineering_Poker
     {
         protected TableContainerUI tableUI;
         protected TableContainerModel tableModel;
+        public string[] cards = { "hart_", "schop_", "klaver_", "ruit_" };
+        public List<string> cardsInUse = new List<string>();
 
         public TableContainerController()
         {
-            //create table model
+            //create tableContainer model
             tableModel = new TableContainerModel();
 
             tableUI = new TableContainerUI(this);
@@ -26,6 +28,21 @@ namespace Software_Engineering_Poker
             {
                 return tableUI;
             }
+        }
+        
+        public string RandomCard() //Returns a string (a random card) and puts it in a list so it can not be generated again
+        {
+            Random rnd = new Random();
+            string card;
+            do
+            {
+                card = cards[rnd.Next(0, cards.Length)] + rnd.Next(1, 14);
+            }
+            while (cardsInUse.Contains(card));
+            cardsInUse.Add(card);
+            Console.WriteLine(card);
+            Console.WriteLine(cardsInUse.Count);
+            return card;
         }
     }
 }

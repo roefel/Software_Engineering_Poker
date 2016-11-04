@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Software_Engineering_Poker.GameManager
+namespace Software_Engineering_Poker
 {
-    class GameController
+    public class GameController
     {
         private static int _amountOfPlayers;  //constant number of amount of players/NPCs in the game
         bool[] playerTurn; //array to indicate which player's turn it is. [0] is the player, [1] 1sth NPC and so on..     
