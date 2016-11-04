@@ -13,11 +13,11 @@ namespace Software_Engineering_Poker
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        public static GameManager.GameController controller;
+        public static GameController controller;
         [STAThread]
         static void Main()
         {
-            controller = new GameManager.GameController();
+            controller = new GameController();
             controller.Start();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
