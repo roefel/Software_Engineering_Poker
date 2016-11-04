@@ -10,7 +10,7 @@ namespace Software_Engineering_Poker
     {
         protected MoneyUI moneyUI;
 
-        public static MoneyModel moneyModel = new MoneyModel();
+        public static MoneyModel moneyModel;
         public MoneyController()
         {
             //create money model
