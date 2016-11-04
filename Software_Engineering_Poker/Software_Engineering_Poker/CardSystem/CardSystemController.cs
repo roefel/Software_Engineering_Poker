@@ -14,7 +14,8 @@ namespace Software_Engineering_Poker
         public string[] cards = { "hart_", "schop_", "klaver_", "ruit_" };
         public List<string> cardsInUse = new List<string>();
 
-        public Bitmap test = Properties.Resources.hart_11;
+        public Bitmap test = Software_Engineering_Poker.Properties.Resources.hart_11;
+        string startupPath = Environment.CurrentDirectory;
 
         public CardSystemController()
         {
@@ -45,9 +46,11 @@ namespace Software_Engineering_Poker
             cardsInUse.Add(card);
             Console.WriteLine(card);
             Console.WriteLine(cardsInUse.Count);
+            Console.WriteLine(startupPath);
             Console.ReadKey();
-            view.dealerCard3.Image = test;
-            view.dealerCard3.Refresh();
+            //cardSystemUI.dealerCard3.Image
+            cardSystemUI.Refresh();
+
             //return card;
         }
     }
