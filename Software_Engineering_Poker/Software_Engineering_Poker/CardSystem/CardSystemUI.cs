@@ -18,8 +18,9 @@ namespace Software_Engineering_Poker
         {
             mController = controller;
             InitializeComponent();
-        }
-        
 
+            //tableMoneyValue.Text = mController.TableMoneyValue + "$";
+            tableMoneyValue.Text = MoneyModel.currentBid + "$";
+        }
     }
 }

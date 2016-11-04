@@ -12,6 +12,7 @@ namespace Software_Engineering_Poker
         protected ButtonContainerModel buttonContainerModel;
         //GameManager.GameController gameController;
         MoneyModel moneyModel;
+        CardSystemController cardSystemController;
 
         public ButtonContainerController()
         {
@@ -19,6 +20,8 @@ namespace Software_Engineering_Poker
             buttonContainerModel = new ButtonContainerModel();
 
             buttonContainerUI = new ButtonContainerUI(this);
+
+            cardSystemController = new CardSystemController();
 
             moneyModel = new MoneyModel();
         }
@@ -107,14 +110,27 @@ namespace Software_Engineering_Poker
                 CurrentBid = CurrentBid + (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
             }
             moneyModel.currentPlayerBalance = TotalMoney;
+
+            //input new value into Model currentBid
             MoneyModel.currentBid = CurrentBid;
+
+            //update table's currentbid
+            cardSystemController.UpdateTableTxt();
         }
 
         public void callBet()
         {
             TotalMoney = TotalMoney - CurrentBid;
             moneyModel.currentPlayerBalance = TotalMoney;
+
+            //input new value into Model currentBid
             MoneyModel.currentBid = CurrentBid;
+
+            //update table's currentbid
+            cardSystemController.UpdateTableTxt();
+
+            //cardSystemController.TableMoneyValue = TotalMoney;
+            //cardSystemUI.tableMoneyValue.Text = TotalMoney + "$";
         }
 
         public void foldBet()

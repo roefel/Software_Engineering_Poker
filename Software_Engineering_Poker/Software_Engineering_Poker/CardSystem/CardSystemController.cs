@@ -1,24 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Software_Engineering_Poker
 {
     public class CardSystemController
     {
-        protected CardSystemUI tableUI;
+        protected CardSystemUI cardSystemUI;
         protected CardSystemModel tableModel;
         public string[] cards = { "hart_", "schop_", "klaver_", "ruit_" };
         public List<string> cardsInUse = new List<string>();
+
+        public Bitmap test = Software_Engineering_Poker.Properties.Resources.hart_11;
+        string startupPath = Environment.CurrentDirectory;
 
         public CardSystemController()
         {
             //create tableContainer model
             tableModel = new CardSystemModel();
 
-            tableUI = new CardSystemUI(this);
+            cardSystemUI = new CardSystemUI(this);
         }
 
         //return instance of the view
@@ -26,10 +31,10 @@ namespace Software_Engineering_Poker
         {
             get
             {
-                return tableUI;
+                return cardSystemUI;
             }
         }
-        
+
         public void RandomCard() //Returns a string (a random card) and puts it in a list so it can not be generated again
         {
             Random rnd = new Random();
@@ -42,10 +47,33 @@ namespace Software_Engineering_Poker
             cardsInUse.Add(card);
             Console.WriteLine(card);
             Console.WriteLine(cardsInUse.Count);
-            Console.ReadKey();
-            view.dealerCard3.Image = Properties.Resources.hart_3; //The way to change the image of a card
+            Console.WriteLine(startupPath);
+            //Console.ReadKey();
+            cardSystemUI.playerPointer.Enabled = false;
+            cardSystemUI.playerPointer.Visible = false;
+            cardSystemUI.dealerCard2.Image = Properties.Resources.hart_10;
+            
 
             //return card;
+        }
+
+        public void UpdateTableTxt()
+        {
+            cardSystemUI.tableMoneyValue.Text = "haha";
+            //tableUI.tableMoneyValue.Text = MoneyModel.currentBid + "$";
+        }
+
+        public int TableMoneyValue
+        {
+            get
+            {
+                return tableModel.TableMoneyValue;
+            }
+
+            set
+            {
+                tableModel.TableMoneyValue = value;
+            }
         }
     }
 }

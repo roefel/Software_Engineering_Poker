@@ -59,6 +59,7 @@ namespace Software_Engineering_Poker
         private void raiseBidLabel_Click(object sender, EventArgs e)
         {
             buttonContainerController.checkRaise();
+
         }
 
         private void callBtn_Click(object sender, EventArgs e)
