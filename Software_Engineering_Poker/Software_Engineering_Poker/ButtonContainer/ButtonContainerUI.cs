@@ -16,6 +16,7 @@ namespace Software_Engineering_Poker
         private ButtonContainerController buttonContainerController;
         //private GameManager.GameController gameController;
         GameController gamecontroller =  Program.controller;
+        CardSystemController cardcontrols = new CardSystemController();
         string backupText;
 
         public ButtonContainerUI(ButtonContainerController controller)
@@ -59,6 +60,7 @@ namespace Software_Engineering_Poker
         private void raiseBidLabel_Click(object sender, EventArgs e)
         {
             buttonContainerController.checkRaise();
+
         }
 
         private void callBtn_Click(object sender, EventArgs e)
@@ -85,6 +87,7 @@ namespace Software_Engineering_Poker
             buttonContainerController.allInBet();
             buttonContainerController.toggleVast();
             gamecontroller.switchTurn();
+            cardcontrols.RandomCard();
             //gamecontroller.endTurn();
         }
 

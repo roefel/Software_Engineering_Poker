@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,17 +9,19 @@ namespace Software_Engineering_Poker
 {
     public class CardSystemController
     {
-        protected CardSystemUI tableUI;
+        protected CardSystemUI cardSystemUI;
         protected CardSystemModel tableModel;
         public string[] cards = { "hart_", "schop_", "klaver_", "ruit_" };
         public List<string> cardsInUse = new List<string>();
+
+        public Bitmap test = Properties.Resources.hart_11;
 
         public CardSystemController()
         {
             //create tableContainer model
             tableModel = new CardSystemModel();
 
-            tableUI = new CardSystemUI(this);
+            cardSystemUI = new CardSystemUI(this);
         }
 
         //return instance of the view
@@ -26,10 +29,10 @@ namespace Software_Engineering_Poker
         {
             get
             {
-                return tableUI;
+                return cardSystemUI;
             }
         }
-        
+
         public void RandomCard() //Returns a string (a random card) and puts it in a list so it can not be generated again
         {
             Random rnd = new Random();
@@ -43,8 +46,8 @@ namespace Software_Engineering_Poker
             Console.WriteLine(card);
             Console.WriteLine(cardsInUse.Count);
             Console.ReadKey();
-            view.dealerCard3.Image = Properties.Resources.hart_3; //The way to change the image of a card
-
+            view.dealerCard3.Image = test;
+            view.dealerCard3.Refresh();
             //return card;
         }
     }

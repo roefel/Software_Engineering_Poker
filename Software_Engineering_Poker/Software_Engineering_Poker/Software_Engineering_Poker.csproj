@@ -150,7 +150,7 @@
     <None Include="images\cards\hart_7.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\cards\hart_8.png" />
+    <Resource Include="images\cards\hart_8.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="images\cards\hart_9.png" />
