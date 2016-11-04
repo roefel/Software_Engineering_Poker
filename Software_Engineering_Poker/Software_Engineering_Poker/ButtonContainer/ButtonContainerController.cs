@@ -45,7 +45,7 @@ namespace Software_Engineering_Poker
         //check en update de raise Button door te kijken naar de value van de textbox
         public void checkRaise()
         {
-            if ((ParseInt(buttonContainerUI.raiseBidTxtBox.Text) > 0) && (ParseInt(buttonContainerUI.raiseBidTxtBox.Text)<= TotalMoney) && (TotalMoney >= CurrentBid))
+            if ((ParseInt(buttonContainerUI.raiseBidTxtBox.Text) > 0) && (TotalMoney > (ParseInt(buttonContainerUI.raiseBidTxtBox.Text) + CurrentBid )) && (ParseInt(buttonContainerUI.raiseBidTxtBox.Text)<= TotalMoney) && (TotalMoney > CurrentBid))
             {
                 buttonContainerUI.raiseBtn.BackColor = System.Drawing.Color.LimeGreen;
                 buttonContainerUI.raiseBtn.Enabled = true;
@@ -97,24 +97,24 @@ namespace Software_Engineering_Poker
         {
             if ((ParseInt(buttonContainerUI.raiseBidTxtBox.Text) > 0) && (ParseInt(buttonContainerUI.raiseBidTxtBox.Text) <= TotalMoney))
             {
-                TotalMoney = TotalMoney - (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
+                TotalMoney = TotalMoney - CurrentBid - (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
                 CurrentBid = CurrentBid + (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
             }
             moneyModel.currentPlayerBalance = TotalMoney;
-            //moneyModel.currentBid = CurrentBid;
+            moneyModel.currentBid = CurrentBid;
         }
 
         public void callBet()
         {
             TotalMoney = TotalMoney - CurrentBid;
             moneyModel.currentPlayerBalance = TotalMoney;
-            //moneyModel.currentBid = CurrentBid;
+            moneyModel.currentBid = CurrentBid;
         }
 
         public void foldBet()
         {
             moneyModel.currentPlayerBalance = TotalMoney;
-            //moneyModel.currentBid = CurrentBid;
+            moneyModel.currentBid = CurrentBid;
         }
 
         public void allInBet()
@@ -122,7 +122,7 @@ namespace Software_Engineering_Poker
             CurrentBid = TotalMoney;
             TotalMoney = 0;
             moneyModel.currentPlayerBalance = TotalMoney;
-            //moneyModel.currentBid = CurrentBid;
+            moneyModel.currentBid = CurrentBid;
         }
 
         //string input naar int
