@@ -47,6 +47,7 @@
             this.tableMoneyValue = new System.Windows.Forms.Label();
             this.computer1Card2 = new System.Windows.Forms.PictureBox();
             this.computer1Card1 = new System.Windows.Forms.PictureBox();
+            this.currentBidBtn = new System.Windows.Forms.Button();
             this.tableBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerPointer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer3Pointer)).BeginInit();
@@ -70,6 +71,7 @@
             // tableBox
             // 
             this.tableBox.BackgroundImage = global::Software_Engineering_Poker.Properties.Resources.tableBackground;
+            this.tableBox.Controls.Add(this.currentBidBtn);
             this.tableBox.Controls.Add(this.playerPointer);
             this.tableBox.Controls.Add(this.computer3Pointer);
             this.tableBox.Controls.Add(this.computer2Pointer);
@@ -301,6 +303,16 @@
             this.computer1Card1.TabIndex = 0;
             this.computer1Card1.TabStop = false;
             // 
+            // currentBidBtn
+            // 
+            this.currentBidBtn.Location = new System.Drawing.Point(429, 279);
+            this.currentBidBtn.Name = "currentBidBtn";
+            this.currentBidBtn.Size = new System.Drawing.Size(75, 61);
+            this.currentBidBtn.TabIndex = 1;
+            this.currentBidBtn.Text = "update currentbid TEST";
+            this.currentBidBtn.UseVisualStyleBackColor = true;
+            this.currentBidBtn.Click += new System.EventHandler(this.currentBidBtn_Click);
+            // 
             // CardSystemUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,5 +364,6 @@
         public System.Windows.Forms.PictureBox computer2Pointer;
         public System.Windows.Forms.PictureBox playerPointer;
         public System.Windows.Forms.PictureBox computer3Pointer;
+        private System.Windows.Forms.Button currentBidBtn;
     }
 }
