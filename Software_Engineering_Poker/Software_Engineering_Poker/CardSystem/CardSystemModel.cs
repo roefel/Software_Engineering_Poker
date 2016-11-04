@@ -10,12 +10,14 @@ namespace Software_Engineering_Poker
     {
         //private MoneyModel moneyModel;
         private int mtableMoneyValue;
+        private int mtableMoneyBid;
         protected Boolean mIsFixed;
 
         public CardSystemModel()
         {
             //moneyModel = new MoneyModel();
-            mtableMoneyValue = MoneyModel.currentBid;
+            mtableMoneyBid = MoneyModel.currentBid;
+            mtableMoneyValue = 1000;
             //mtableMoneyValue = 0;
             mIsFixed = false;
         }
@@ -29,6 +31,18 @@ namespace Software_Engineering_Poker
             set
             {
                 mtableMoneyValue = value;
+            }
+        }
+
+        public int TableMoneyBid
+        {
+            get
+            {
+                return mtableMoneyBid;
+            }
+            set
+            {
+                mtableMoneyBid = value;
             }
         }
     }

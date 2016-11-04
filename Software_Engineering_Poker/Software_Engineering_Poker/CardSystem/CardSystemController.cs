@@ -61,7 +61,8 @@ namespace Software_Engineering_Poker
         {
             //cardSystemUI.tableMoneyValue.Text = "haha";
 
-            cardSystemUI.tableMoneyValue.Text = MoneyModel.currentBid + "$";
+            cardSystemUI.currentBidLabel.Text = "currentBid:" + MoneyModel.currentBid + "$";
+            cardSystemUI.tableMoneyValue.Text = TableMoneyValue + MoneyModel.currentBid + "$";
         }
 
         public int TableMoneyValue
@@ -74,6 +75,19 @@ namespace Software_Engineering_Poker
             set
             {
                 tableModel.TableMoneyValue = value;
+            }
+        }
+
+        public int TableMoneyBid
+        {
+            get
+            {
+                return tableModel.TableMoneyBid;
+            }
+
+            set
+            {
+                tableModel.TableMoneyBid = value;
             }
         }
     }

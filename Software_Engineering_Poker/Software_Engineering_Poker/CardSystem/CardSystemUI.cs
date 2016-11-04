@@ -28,5 +28,10 @@ namespace Software_Engineering_Poker
         {
             mController.UpdateTableTxt();
         }
+
+        private void currentBidLabel_Click(object sender, EventArgs e)
+        {
+            //doiets
+        }
     }
 }
