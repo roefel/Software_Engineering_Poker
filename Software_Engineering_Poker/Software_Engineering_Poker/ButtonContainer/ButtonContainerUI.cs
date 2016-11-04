@@ -58,7 +58,7 @@ namespace Software_Engineering_Poker
 
         private void raiseBidLabel_Click(object sender, EventArgs e)
         {
-            //buttonContainerController.doeiets()
+            buttonContainerController.checkRaise();
         }
 
         private void callBtn_Click(object sender, EventArgs e)
@@ -74,6 +74,9 @@ namespace Software_Engineering_Poker
             buttonContainerController.foldBet();
             buttonContainerController.toggleVast();
             gamecontroller.switchTurn();
+            //gamecontroller.endTurn();
+            //gamecontroller.endMatch();
+
         }
 
         private void allBtn_Click(object sender, EventArgs e)
@@ -82,6 +85,7 @@ namespace Software_Engineering_Poker
             buttonContainerController.allInBet();
             buttonContainerController.toggleVast();
             gamecontroller.switchTurn();
+            //gamecontroller.endTurn();
         }
 
         private void unlockBtnTest_Click(object sender, EventArgs e)
@@ -116,12 +120,9 @@ namespace Software_Engineering_Poker
             raiseBidTxtBox.Enabled = true;
             raiseBtn.Text = backupText;
 
-            //unlock fold button
-            foldBtn.Enabled = true;
-            foldBtn.BackColor = System.Drawing.Color.Red;
-
             buttonContainerController.checkRaise();
             buttonContainerController.checkCall();
+            buttonContainerController.checkFold();
             buttonContainerController.checkAllIn();
         }
     }
