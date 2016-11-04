@@ -46,7 +46,7 @@
             this.Controls.Add(buttonContainer.view);
 
             //Create new instance of tableContainer
-            TableContainerController tableContainer = new TableContainerController();
+            CardSystemController tableContainer = new CardSystemController();
 
             //Create new instance of MoneyUI
             MoneyController money = new MoneyController();

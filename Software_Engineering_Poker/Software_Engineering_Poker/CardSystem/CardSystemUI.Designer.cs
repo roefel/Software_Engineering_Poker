@@ -1,6 +1,6 @@
 ﻿namespace Software_Engineering_Poker
 {
-    partial class TableContainerUI
+    partial class CardSystemUI
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,8 +30,8 @@
         {
             this.tableBox = new System.Windows.Forms.GroupBox();
             this.tableMoneyValue = new System.Windows.Forms.Label();
-            this.computer1Card2 = new System.Windows.Forms.PictureBox();
             this.computer1Card1 = new System.Windows.Forms.PictureBox();
+            this.computer1Card2 = new System.Windows.Forms.PictureBox();
             this.dealerCard1 = new System.Windows.Forms.PictureBox();
             this.dealerCard2 = new System.Windows.Forms.PictureBox();
             this.dealerCard3 = new System.Windows.Forms.PictureBox();
@@ -39,13 +39,13 @@
             this.dealerCard5 = new System.Windows.Forms.PictureBox();
             this.computer2Card1 = new System.Windows.Forms.PictureBox();
             this.computer2Card2 = new System.Windows.Forms.PictureBox();
-            this.computer3Card2 = new System.Windows.Forms.PictureBox();
             this.computer3Card1 = new System.Windows.Forms.PictureBox();
-            this.playerCard2 = new System.Windows.Forms.PictureBox();
+            this.computer3Card2 = new System.Windows.Forms.PictureBox();
             this.playerCard1 = new System.Windows.Forms.PictureBox();
+            this.playerCard2 = new System.Windows.Forms.PictureBox();
             this.tableBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.computer1Card2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer1Card1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computer1Card2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard3)).BeginInit();
@@ -53,10 +53,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer2Card1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer2Card2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computer3Card2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer3Card1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerCard2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computer3Card2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerCard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerCard2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableBox
@@ -93,6 +93,17 @@
             this.tableMoneyValue.TabIndex = 5;
             this.tableMoneyValue.Text = "1000$";
             // 
+            // computer1Card1
+            // 
+            this.computer1Card1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.computer1Card1.Image = global::Software_Engineering_Poker.Properties.Resources.card_default;
+            this.computer1Card1.Location = new System.Drawing.Point(18, 19);
+            this.computer1Card1.Name = "computer1Card1";
+            this.computer1Card1.Size = new System.Drawing.Size(65, 80);
+            this.computer1Card1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.computer1Card1.TabIndex = 0;
+            this.computer1Card1.TabStop = false;
+            // 
             // computer1Card2
             // 
             this.computer1Card2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -104,17 +115,6 @@
             this.computer1Card2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.computer1Card2.TabIndex = 3;
             this.computer1Card2.TabStop = false;
-            // 
-            // computer1Card1
-            // 
-            this.computer1Card1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.computer1Card1.Image = global::Software_Engineering_Poker.Properties.Resources.card_default;
-            this.computer1Card1.Location = new System.Drawing.Point(18, 19);
-            this.computer1Card1.Name = "computer1Card1";
-            this.computer1Card1.Size = new System.Drawing.Size(65, 80);
-            this.computer1Card1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.computer1Card1.TabIndex = 0;
-            this.computer1Card1.TabStop = false;
             // 
             // dealerCard1
             // 
@@ -200,18 +200,6 @@
             this.computer2Card2.TabIndex = 12;
             this.computer2Card2.TabStop = false;
             // 
-            // computer3Card2
-            // 
-            this.computer3Card2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.computer3Card2.Image = global::Software_Engineering_Poker.Properties.Resources.card_default;
-            this.computer3Card2.ImageLocation = "";
-            this.computer3Card2.Location = new System.Drawing.Point(819, 279);
-            this.computer3Card2.Name = "computer3Card2";
-            this.computer3Card2.Size = new System.Drawing.Size(65, 80);
-            this.computer3Card2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.computer3Card2.TabIndex = 14;
-            this.computer3Card2.TabStop = false;
-            // 
             // computer3Card1
             // 
             this.computer3Card1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -224,17 +212,17 @@
             this.computer3Card1.TabIndex = 13;
             this.computer3Card1.TabStop = false;
             // 
-            // playerCard2
+            // computer3Card2
             // 
-            this.playerCard2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.playerCard2.Image = global::Software_Engineering_Poker.Properties.Resources.hart_11;
-            this.playerCard2.ImageLocation = "";
-            this.playerCard2.Location = new System.Drawing.Point(89, 279);
-            this.playerCard2.Name = "playerCard2";
-            this.playerCard2.Size = new System.Drawing.Size(65, 80);
-            this.playerCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.playerCard2.TabIndex = 16;
-            this.playerCard2.TabStop = false;
+            this.computer3Card2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.computer3Card2.Image = global::Software_Engineering_Poker.Properties.Resources.card_default;
+            this.computer3Card2.ImageLocation = "";
+            this.computer3Card2.Location = new System.Drawing.Point(819, 279);
+            this.computer3Card2.Name = "computer3Card2";
+            this.computer3Card2.Size = new System.Drawing.Size(65, 80);
+            this.computer3Card2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.computer3Card2.TabIndex = 14;
+            this.computer3Card2.TabStop = false;
             // 
             // playerCard1
             // 
@@ -248,6 +236,18 @@
             this.playerCard1.TabIndex = 15;
             this.playerCard1.TabStop = false;
             // 
+            // playerCard2
+            // 
+            this.playerCard2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playerCard2.Image = global::Software_Engineering_Poker.Properties.Resources.hart_11;
+            this.playerCard2.ImageLocation = "";
+            this.playerCard2.Location = new System.Drawing.Point(89, 279);
+            this.playerCard2.Name = "playerCard2";
+            this.playerCard2.Size = new System.Drawing.Size(65, 80);
+            this.playerCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.playerCard2.TabIndex = 16;
+            this.playerCard2.TabStop = false;
+            // 
             // TableContainerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,8 +257,8 @@
             this.Size = new System.Drawing.Size(975, 408);
             this.tableBox.ResumeLayout(false);
             this.tableBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.computer1Card2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer1Card1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computer1Card2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard3)).EndInit();
@@ -266,30 +266,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer2Card1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer2Card2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computer3Card2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer3Card1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerCard2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computer3Card2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerCard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerCard2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox tableBox;
-        private System.Windows.Forms.PictureBox computer1Card1;
-        private System.Windows.Forms.PictureBox computer1Card2;
         private System.Windows.Forms.Label tableMoneyValue;
+        private System.Windows.Forms.GroupBox tableBox;
+        private System.Windows.Forms.PictureBox playerCard2;
+        private System.Windows.Forms.PictureBox playerCard1;
+        private System.Windows.Forms.PictureBox computer3Card2;
+        private System.Windows.Forms.PictureBox computer3Card1;
+        private System.Windows.Forms.PictureBox computer2Card2;
+        private System.Windows.Forms.PictureBox computer2Card1;
         private System.Windows.Forms.PictureBox dealerCard5;
         private System.Windows.Forms.PictureBox dealerCard4;
         private System.Windows.Forms.PictureBox dealerCard3;
         private System.Windows.Forms.PictureBox dealerCard2;
         private System.Windows.Forms.PictureBox dealerCard1;
-        private System.Windows.Forms.PictureBox computer3Card2;
-        private System.Windows.Forms.PictureBox computer3Card1;
-        private System.Windows.Forms.PictureBox computer2Card2;
-        private System.Windows.Forms.PictureBox computer2Card1;
-        private System.Windows.Forms.PictureBox playerCard2;
-        private System.Windows.Forms.PictureBox playerCard1;
+        private System.Windows.Forms.PictureBox computer1Card2;
+        private System.Windows.Forms.PictureBox computer1Card1;
     }
 }

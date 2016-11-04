@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Software_Engineering_Poker
 {
-    public class TableContainerModel
+    public class CardSystemModel
     {
         protected int mtableMoneyValue;
         protected Boolean mIsFixed;
 
-        public TableContainerModel()
+        public CardSystemModel()
         {
             mtableMoneyValue = 0;
             mIsFixed = false;
         }
 
-        public int value
+        public int TableMoneyValue
         {
             get
             {

@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace Software_Engineering_Poker
 {
-    public class TableContainerController
+    public class CardSystemController
     {
-        protected TableContainerUI tableUI;
-        protected TableContainerModel tableModel;
+        protected CardSystemUI tableUI;
+        protected CardSystemModel tableModel;
         public string[] cards = { "hart_", "schop_", "klaver_", "ruit_" };
         public List<string> cardsInUse = new List<string>();
 
-        public TableContainerController()
+        public CardSystemController()
         {
             //create tableContainer model
-            tableModel = new TableContainerModel();
+            tableModel = new CardSystemModel();
 
-            tableUI = new TableContainerUI(this);
+            tableUI = new CardSystemUI(this);
         }
 
         //return instance of the view
-        public TableContainerUI view
+        public CardSystemUI view
         {
             get
             {
