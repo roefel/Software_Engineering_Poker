@@ -70,10 +70,12 @@ namespace Software_Engineering_Poker
             //cardSystemUI.tableMoneyValue.Text = "haha";
 
             cardSystemUI.currentBidLabel.Text = "currentBid:" + MoneyModel.currentBid + "$";
-            cardSystemUI.tableMoneyValue.Text = TableMoneyValue + MoneyModel.currentBid + "$";
+
+            TableMoneyValue = TableMoneyValue + MoneyModel.currentBid;
+            cardSystemUI.tableMoneyValue.Text = TableMoneyValue + "$";
 
             Console.WriteLine("currentBid= " + MoneyModel.currentBid + "$");
-            Console.WriteLine("tablemoney= " + (tableModel.TableMoneyValue + MoneyModel.currentBid) + "$");
+            Console.WriteLine("tablemoney= " + (tableModel.TableMoneyValue) + "$");
         }
 
         public int TableMoneyValue
