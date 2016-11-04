@@ -59,8 +59,9 @@ namespace Software_Engineering_Poker
 
         public void UpdateTableTxt()
         {
-            cardSystemUI.tableMoneyValue.Text = "haha";
-            //tableUI.tableMoneyValue.Text = MoneyModel.currentBid + "$";
+            //cardSystemUI.tableMoneyValue.Text = "haha";
+
+            cardSystemUI.tableMoneyValue.Text = MoneyModel.currentBid + "$";
         }
 
         public int TableMoneyValue
