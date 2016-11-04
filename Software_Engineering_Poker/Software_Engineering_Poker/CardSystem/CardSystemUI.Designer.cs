@@ -29,6 +29,8 @@
         public void InitializeComponent()
         {
             this.tableBox = new System.Windows.Forms.GroupBox();
+            this.randomCardGen = new System.Windows.Forms.Button();
+            this.currentBidLabel = new System.Windows.Forms.Label();
             this.currentBidBtn = new System.Windows.Forms.Button();
             this.playerPointer = new System.Windows.Forms.PictureBox();
             this.computer3Pointer = new System.Windows.Forms.PictureBox();
@@ -48,7 +50,6 @@
             this.tableMoneyValue = new System.Windows.Forms.Label();
             this.computer1Card2 = new System.Windows.Forms.PictureBox();
             this.computer1Card1 = new System.Windows.Forms.PictureBox();
-            this.currentBidLabel = new System.Windows.Forms.Label();
             this.tableBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerPointer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computer3Pointer)).BeginInit();
@@ -72,6 +73,7 @@
             // tableBox
             // 
             this.tableBox.BackgroundImage = global::Software_Engineering_Poker.Properties.Resources.tableBackground;
+            this.tableBox.Controls.Add(this.randomCardGen);
             this.tableBox.Controls.Add(this.currentBidLabel);
             this.tableBox.Controls.Add(this.currentBidBtn);
             this.tableBox.Controls.Add(this.playerPointer);
@@ -98,11 +100,32 @@
             this.tableBox.TabIndex = 0;
             this.tableBox.TabStop = false;
             // 
+            // randomCardGen
+            // 
+            this.randomCardGen.Location = new System.Drawing.Point(400, 315);
+            this.randomCardGen.Name = "randomCardGen";
+            this.randomCardGen.Size = new System.Drawing.Size(136, 30);
+            this.randomCardGen.TabIndex = 21;
+            this.randomCardGen.Text = "Show A Random Card";
+            this.randomCardGen.UseVisualStyleBackColor = true;
+            this.randomCardGen.Click += new System.EventHandler(this.randomCardGen_Click);
+            // 
+            // currentBidLabel
+            // 
+            this.currentBidLabel.AutoSize = true;
+            this.currentBidLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.currentBidLabel.Location = new System.Drawing.Point(425, 243);
+            this.currentBidLabel.Name = "currentBidLabel";
+            this.currentBidLabel.Size = new System.Drawing.Size(93, 20);
+            this.currentBidLabel.TabIndex = 1;
+            this.currentBidLabel.Text = "CurrentBid: ";
+            this.currentBidLabel.Click += new System.EventHandler(this.currentBidLabel_Click);
+            // 
             // currentBidBtn
             // 
-            this.currentBidBtn.Location = new System.Drawing.Point(429, 279);
+            this.currentBidBtn.Location = new System.Drawing.Point(400, 279);
             this.currentBidBtn.Name = "currentBidBtn";
-            this.currentBidBtn.Size = new System.Drawing.Size(75, 61);
+            this.currentBidBtn.Size = new System.Drawing.Size(136, 30);
             this.currentBidBtn.TabIndex = 1;
             this.currentBidBtn.Text = "update currentbid TEST";
             this.currentBidBtn.UseVisualStyleBackColor = true;
@@ -315,17 +338,6 @@
             this.computer1Card1.TabIndex = 0;
             this.computer1Card1.TabStop = false;
             // 
-            // currentBidLabel
-            // 
-            this.currentBidLabel.AutoSize = true;
-            this.currentBidLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.currentBidLabel.Location = new System.Drawing.Point(425, 243);
-            this.currentBidLabel.Name = "currentBidLabel";
-            this.currentBidLabel.Size = new System.Drawing.Size(93, 20);
-            this.currentBidLabel.TabIndex = 1;
-            this.currentBidLabel.Text = "CurrentBid: ";
-            this.currentBidLabel.Click += new System.EventHandler(this.currentBidLabel_Click);
-            // 
             // CardSystemUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,5 +391,6 @@
         public System.Windows.Forms.PictureBox computer3Pointer;
         public System.Windows.Forms.Button currentBidBtn;
         public System.Windows.Forms.Label currentBidLabel;
+        public System.Windows.Forms.Button randomCardGen;
     }
 }

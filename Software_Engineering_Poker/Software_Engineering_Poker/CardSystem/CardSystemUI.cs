@@ -27,12 +27,16 @@ namespace Software_Engineering_Poker
         private void currentBidBtn_Click(object sender, EventArgs e)
         {
             mController.UpdateTableTxt();
-            mController.RandomCard();
         }
 
         private void currentBidLabel_Click(object sender, EventArgs e)
         {
             //doiets
+        }
+
+        private void randomCardGen_Click(object sender, EventArgs e)
+        {
+            mController.RandomCard();
         }
     }
 }
