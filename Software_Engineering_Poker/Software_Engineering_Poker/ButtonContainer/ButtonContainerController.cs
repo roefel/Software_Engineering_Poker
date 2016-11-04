@@ -61,7 +61,7 @@ namespace Software_Engineering_Poker
 
         public void checkCall()
         {
-            if (TotalMoney >= CurrentBid)
+            if (TotalMoney > CurrentBid)
             {
                 buttonContainerUI.callBtn.BackColor = System.Drawing.Color.LightSeaGreen;
                 buttonContainerUI.callBtn.Enabled = true;
