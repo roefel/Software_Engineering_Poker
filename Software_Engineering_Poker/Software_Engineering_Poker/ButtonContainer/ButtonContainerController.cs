@@ -101,20 +101,20 @@ namespace Software_Engineering_Poker
                 CurrentBid = CurrentBid + (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
             }
             moneyModel.currentPlayerBalance = TotalMoney;
-            //moneyModel.currentBid = CurrentBid;
+            moneyModel.currentBid = CurrentBid;
         }
 
         public void callBet()
         {
             TotalMoney = TotalMoney - CurrentBid;
             moneyModel.currentPlayerBalance = TotalMoney;
-            //moneyModel.currentBid = CurrentBid;
+            moneyModel.currentBid = CurrentBid;
         }
 
         public void foldBet()
         {
             moneyModel.currentPlayerBalance = TotalMoney;
-            //moneyModel.currentBid = CurrentBid;
+            moneyModel.currentBid = CurrentBid;
         }
 
         public void allInBet()
@@ -122,7 +122,7 @@ namespace Software_Engineering_Poker
             CurrentBid = TotalMoney;
             TotalMoney = 0;
             moneyModel.currentPlayerBalance = TotalMoney;
-            //moneyModel.currentBid = CurrentBid;
+            moneyModel.currentBid = CurrentBid;
         }
 
         //string input naar int

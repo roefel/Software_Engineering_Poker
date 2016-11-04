@@ -22,9 +22,9 @@ namespace Software_Engineering_Poker
             totalMoney = moneyModel.currentPlayerBalance;
             currentBid = moneyModel.currentBid;
 
-            //placeholder
-            //totalMoney = 2000;
             isVast = false;
+            ////placeholder
+            //totalMoney = 2000;
             //currentBid = 10;
         }
 
