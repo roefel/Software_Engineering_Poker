@@ -8,3 +8,5 @@ Voor de speler staan 2 default kaarten wel al aangeduid, deze zijn niet gebonden
 UpdateTableMoney() kreeg ook een eigen knop zodat de visuele kant daarvan wordt aangestuurt vanuit de UI klasse zelf. Iets wat niet de bedoeling is, en ook niet de bedoeling was.
 
 De pijlen die zichtbaar zijn, zijn bedoeld om de huidige speler's beurt aan te geven. Deze wilden we om te beurten laten verschijnen door de pciturebox visible en invisble te stellen, maar ook dit kon niet worden aangestuurd.
+
+Verschillende functies werden nog wel uitgeschreven (zoals bijvoorbeeld het berekenen van de winnende kaarten), maar werden jammer genoeg niet visueel gebruikt gemaakt vanwege het probleem met de pcitureboxen die niet willen updaten tijdens de applicatie.
