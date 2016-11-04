@@ -8,7 +8,7 @@ namespace Software_Engineering_Poker
 {
     public class MoneyModel
     {
-        private int _currentBid;
+        private static int _currentBid;
         private int _currentPlayerBalance;
         private static int[] _aiBalance = new int[1];
 
@@ -20,7 +20,7 @@ namespace Software_Engineering_Poker
             currentBid = 10;
         }
 
-        public int currentBid
+        public static int currentBid
         {
             get
             {

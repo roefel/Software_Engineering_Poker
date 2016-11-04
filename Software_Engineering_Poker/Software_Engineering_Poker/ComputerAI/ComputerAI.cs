@@ -9,21 +9,21 @@ namespace Software_Engineering_Poker.ComputerAI
     class ComputerAI
     {
         private static bool _folded;
-        private static int _round;
+
 
         public ComputerAI()
         {
             folded = false;
-            round = 1;
         }
 
 
 
-        public static void aiTurnAlgorithm(int balance)
+        public static void aiTurnAlgorithm(int balance, int round)
         {
             Console.WriteLine("my turn");
-            if (folded)
+            if (folded || balance < MoneyModel.currentBid)
             {
+                folded = true;
                 //end turn
             }
             else
@@ -66,19 +66,6 @@ namespace Software_Engineering_Poker.ComputerAI
             set
             {
                 _folded = value;
-            }
-        }
-
-        public static int round
-        {
-            get
-            {
-                return _round;
-            }
-
-            set
-            {
-                _round = value;
             }
         }
     }

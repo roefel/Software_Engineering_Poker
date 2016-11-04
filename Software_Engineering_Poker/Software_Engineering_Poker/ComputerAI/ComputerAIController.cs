@@ -10,18 +10,20 @@ namespace Software_Engineering_Poker.ComputerAI
     {
         static ComputerAI computerAI;
         private static int _aiNumberTurn;
+        private static int _roundNumber;
         
 
         public ComputerAIController()
         {
             computerAI = new ComputerAI();
             aiNumberTurn = 0;
+            roundNumber = 1;
         }
 
         public static void startTurn()
         {
             Console.WriteLine("aiNumberTurn= " + aiNumberTurn);
-            ComputerAI.aiTurnAlgorithm(MoneyModel.aiBalance[aiNumberTurn]);
+            ComputerAI.aiTurnAlgorithm(MoneyModel.aiBalance[aiNumberTurn], roundNumber );
         }
 
         public static int aiNumberTurn
@@ -34,6 +36,19 @@ namespace Software_Engineering_Poker.ComputerAI
             set
             {
                 _aiNumberTurn = value;
+            }
+        }
+
+        public static int roundNumber
+        {
+            get
+            {
+                return _roundNumber;
+            }
+
+            set
+            {
+                _roundNumber = value;
             }
         }
     }
