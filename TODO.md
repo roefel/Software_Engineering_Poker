@@ -4,3 +4,6 @@
 - Als Raise gedaan wordt ==> Updaten van money en totalTableMoney
 - Raise moet rekening houden met vorige speler raise indien van toepassing
 - Aanduiding wiens beurt het is
+
+
+KAARTEN LIVE UPDATEN
