@@ -66,6 +66,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GameManager\GameController.cs" />
+    <Compile Include="GameManager\GameTurnUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameManager\GameTurnUI.Designer.cs">
+      <DependentUpon>GameTurnUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Money\MoneyController.cs" />
     <Compile Include="Money\MoneyModel.cs" />
     <Compile Include="Money\MoneyUI.cs">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameManager\GameTurnUI.resx">
+      <DependentUpon>GameTurnUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Money\MoneyUI.resx">
       <DependentUpon>MoneyUI.cs</DependentUpon>
@@ -286,6 +295,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\cards\card_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\assets\pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\assets\computer1Pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\assets\computer2Pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\assets\computer3Pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\assets\playerPointer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

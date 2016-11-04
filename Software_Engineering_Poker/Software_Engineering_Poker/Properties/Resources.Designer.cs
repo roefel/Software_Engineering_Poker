@@ -83,6 +83,26 @@ namespace Software_Engineering_Poker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap computer2Pointer {
+            get {
+                object obj = ResourceManager.GetObject("computer2Pointer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap computer3Pointer {
+            get {
+                object obj = ResourceManager.GetObject("computer3Pointer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hart_1 {
             get {
                 object obj = ResourceManager.GetObject("hart_1", resourceCulture);
@@ -336,6 +356,26 @@ namespace Software_Engineering_Poker.Properties {
         internal static System.Drawing.Bitmap klaver_9 {
             get {
                 object obj = ResourceManager.GetObject("klaver_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap playerPointer {
+            get {
+                object obj = ResourceManager.GetObject("playerPointer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pointer {
+            get {
+                object obj = ResourceManager.GetObject("pointer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

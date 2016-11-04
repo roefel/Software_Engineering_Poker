@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Software_Engineering_Poker
 {
@@ -48,7 +49,7 @@ namespace Software_Engineering_Poker
             Console.WriteLine(cardsInUse.Count);
             Console.WriteLine(startupPath);
             Console.ReadKey();
-            //cardSystemUI.dealerCard3.Image
+            cardSystemUI.dealerCard2.Image = Properties.Resources.hart_10;
             cardSystemUI.Refresh();
 
             //return card;
