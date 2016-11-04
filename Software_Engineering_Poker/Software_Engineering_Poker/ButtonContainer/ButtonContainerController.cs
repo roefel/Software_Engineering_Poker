@@ -116,6 +116,7 @@ namespace Software_Engineering_Poker
 
             //update table's currentbid
             cardSystemController.UpdateTableTxt();
+            Console.WriteLine("playerbalance= " + TotalMoney);
         }
 
         public void callBet()
@@ -128,12 +129,10 @@ namespace Software_Engineering_Poker
 
             //update table's currentbid
             cardSystemController.UpdateTableTxt();
+            Console.WriteLine("playerbalance= " + TotalMoney);
 
             //cardSystemController.TableMoneyValue = TotalMoney;
             //cardSystemUI.tableMoneyValue.Text = TotalMoney + "$";
-
-            Console.WriteLine("currentBid= " + MoneyModel.currentBid);
-            Console.WriteLine("playerbalance= " + TotalMoney);
         }
 
         public void foldBet()
@@ -148,6 +147,7 @@ namespace Software_Engineering_Poker
             TotalMoney = 0;
             moneyModel.currentPlayerBalance = TotalMoney;
             MoneyModel.currentBid = CurrentBid;
+            cardSystemController.UpdateTableTxt();
         }
 
         //string input naar int
