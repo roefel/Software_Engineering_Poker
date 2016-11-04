@@ -25,6 +25,19 @@ namespace Software_Engineering_Poker
         //    return newBalance;
         //}
 
+        public int currentPlayerBalance
+        {
+            get
+            {
+                return moneyModel.currentPlayerBalance;
+            }
+
+            set
+            {
+                moneyModel.currentPlayerBalance = value;
+            }
+        }
+
         public MoneyUI view
         {
             get
