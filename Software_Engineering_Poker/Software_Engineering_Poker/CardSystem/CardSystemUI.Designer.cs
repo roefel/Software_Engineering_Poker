@@ -127,7 +127,7 @@
             this.currentBidBtn.Name = "currentBidBtn";
             this.currentBidBtn.Size = new System.Drawing.Size(136, 30);
             this.currentBidBtn.TabIndex = 1;
-            this.currentBidBtn.Text = "update currentbid TEST";
+            this.currentBidBtn.Text = "update the table TEST";
             this.currentBidBtn.UseVisualStyleBackColor = true;
             this.currentBidBtn.Click += new System.EventHandler(this.currentBidBtn_Click);
             // 

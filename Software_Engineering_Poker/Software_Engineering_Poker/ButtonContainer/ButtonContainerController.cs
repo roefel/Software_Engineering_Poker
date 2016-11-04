@@ -131,6 +131,9 @@ namespace Software_Engineering_Poker
 
             //cardSystemController.TableMoneyValue = TotalMoney;
             //cardSystemUI.tableMoneyValue.Text = TotalMoney + "$";
+
+            Console.WriteLine("currentBid= " + MoneyModel.currentBid);
+            Console.WriteLine("playerbalance= " + TotalMoney);
         }
 
         public void foldBet()

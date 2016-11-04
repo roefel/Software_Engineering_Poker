@@ -71,6 +71,9 @@ namespace Software_Engineering_Poker
 
             cardSystemUI.currentBidLabel.Text = "currentBid:" + MoneyModel.currentBid + "$";
             cardSystemUI.tableMoneyValue.Text = TableMoneyValue + MoneyModel.currentBid + "$";
+
+            Console.WriteLine("currentBid= " + MoneyModel.currentBid + "$");
+            Console.WriteLine("tablemoney= " + (tableModel.TableMoneyValue + MoneyModel.currentBid) + "$");
         }
 
         public int TableMoneyValue
