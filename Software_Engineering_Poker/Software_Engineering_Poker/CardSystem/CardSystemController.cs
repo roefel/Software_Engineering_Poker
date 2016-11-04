@@ -48,9 +48,11 @@ namespace Software_Engineering_Poker
             Console.WriteLine(card);
             Console.WriteLine(cardsInUse.Count);
             Console.WriteLine(startupPath);
-            Console.ReadKey();
+            //Console.ReadKey();
+            cardSystemUI.playerPointer.Enabled = false;
+            cardSystemUI.playerPointer.Visible = false;
             cardSystemUI.dealerCard2.Image = Properties.Resources.hart_10;
-            cardSystemUI.Refresh();
+            
 
             //return card;
         }

@@ -138,6 +138,7 @@
             // playerCard2
             // 
             this.playerCard2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playerCard2.Image = global::Software_Engineering_Poker.Properties.Resources.card_default;
             this.playerCard2.ImageLocation = "";
             this.playerCard2.Location = new System.Drawing.Point(89, 279);
             this.playerCard2.Name = "playerCard2";
@@ -149,6 +150,7 @@
             // playerCard1
             // 
             this.playerCard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playerCard1.Image = global::Software_Engineering_Poker.Properties.Resources.card_default;
             this.playerCard1.ImageLocation = "";
             this.playerCard1.Location = new System.Drawing.Point(18, 279);
             this.playerCard1.Name = "playerCard1";
@@ -244,6 +246,7 @@
             // dealerCard2
             // 
             this.dealerCard2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.dealerCard2.Image = global::Software_Engineering_Poker.Properties.Resources.card_default;
             this.dealerCard2.ImageLocation = "";
             this.dealerCard2.Location = new System.Drawing.Point(358, 144);
             this.dealerCard2.Name = "dealerCard2";
@@ -255,6 +258,7 @@
             // dealerCard1
             // 
             this.dealerCard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.dealerCard1.Image = global::Software_Engineering_Poker.Properties.Resources.card_default;
             this.dealerCard1.ImageLocation = "";
             this.dealerCard1.Location = new System.Drawing.Point(287, 144);
             this.dealerCard1.Name = "dealerCard1";
@@ -267,6 +271,7 @@
             // 
             this.tableMoneyValue.AutoSize = true;
             this.tableMoneyValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableMoneyValue.Image = global::Software_Engineering_Poker.Properties.Resources.tableBackground;
             this.tableMoneyValue.Location = new System.Drawing.Point(423, 89);
             this.tableMoneyValue.Name = "tableMoneyValue";
             this.tableMoneyValue.Size = new System.Drawing.Size(89, 31);
@@ -276,6 +281,7 @@
             // computer1Card2
             // 
             this.computer1Card2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.computer1Card2.Image = global::Software_Engineering_Poker.Properties.Resources.card_default;
             this.computer1Card2.ImageLocation = "";
             this.computer1Card2.Location = new System.Drawing.Point(89, 19);
             this.computer1Card2.Name = "computer1Card2";
@@ -287,6 +293,7 @@
             // computer1Card1
             // 
             this.computer1Card1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.computer1Card1.Image = global::Software_Engineering_Poker.Properties.Resources.card_default;
             this.computer1Card1.Location = new System.Drawing.Point(18, 19);
             this.computer1Card1.Name = "computer1Card1";
             this.computer1Card1.Size = new System.Drawing.Size(65, 80);
@@ -341,9 +348,9 @@
         public System.Windows.Forms.PictureBox dealerCard1;
         public System.Windows.Forms.PictureBox computer1Card2;
         public System.Windows.Forms.PictureBox computer1Card1;
-        private System.Windows.Forms.PictureBox computer1Pointer;
-        private System.Windows.Forms.PictureBox computer2Pointer;
-        private System.Windows.Forms.PictureBox playerPointer;
-        private System.Windows.Forms.PictureBox computer3Pointer;
+        public System.Windows.Forms.PictureBox computer1Pointer;
+        public System.Windows.Forms.PictureBox computer2Pointer;
+        public System.Windows.Forms.PictureBox playerPointer;
+        public System.Windows.Forms.PictureBox computer3Pointer;
     }
 }
