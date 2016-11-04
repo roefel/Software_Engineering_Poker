@@ -76,6 +76,12 @@ namespace Software_Engineering_Poker
             }
         }
 
+        public void checkFold()
+        {
+            buttonContainerUI.foldBtn.BackColor = System.Drawing.Color.Red;
+            buttonContainerUI.foldBtn.Enabled = true;
+        }
+
         public void checkAllIn()
         {
             if (TotalMoney > 0 && TotalMoney >= CurrentBid)
