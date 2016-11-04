@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Software_Engineering_Poker
 {
-    public class TableContainerModel
+    public class CardSystemModel
     {
         private MoneyModel moneyModel;
         protected int mtableMoneyValue;
         protected Boolean mIsFixed;
 
-        public TableContainerModel()
+        public CardSystemModel()
         {
             moneyModel = new MoneyModel();
             mtableMoneyValue = moneyModel.currentPlayerBalance;
@@ -20,7 +20,7 @@ namespace Software_Engineering_Poker
             mIsFixed = false;
         }
 
-        public int value
+        public int TableMoneyValue
         {
             get
             {

@@ -46,13 +46,13 @@
             this.Controls.Add(buttonContainer.view);
 
             //Create new instance of tableContainer
-            TableContainerController tableContainer = new TableContainerController();
+            CardSystemController cardSystem = new CardSystemController();
 
             //Create new instance of MoneyUI
             MoneyController money = new MoneyController();
 
             //Add table view to form
-            this.Controls.Add(tableContainer.view);
+            this.Controls.Add(cardSystem.view);
             this.Controls.Add(money.view);
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -60,10 +60,10 @@
             //Organizing the view
             money.view.Left = 30;
             money.view.Top = 30;
-            buttonContainer.view.Top = tableContainer.view.Height + 30;
-            buttonContainer.view.Left = (money.view.Width + (tableContainer.view.Width/12)) + 32;
-            tableContainer.view.Left = money.view.Width + 20;
-            tableContainer.view.Top = money.view.Top;
+            buttonContainer.view.Top = cardSystem.view.Height + 30;
+            buttonContainer.view.Left = (money.view.Width + (cardSystem.view.Width/12)) + 32;
+            cardSystem.view.Left = money.view.Width + 20;
+            cardSystem.view.Top = money.view.Top;
         }
 
         #endregion

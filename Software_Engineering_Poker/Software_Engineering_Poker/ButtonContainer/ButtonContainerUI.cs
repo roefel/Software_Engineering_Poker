@@ -14,7 +14,8 @@ namespace Software_Engineering_Poker
     public partial class ButtonContainerUI : UserControl
     {
         private ButtonContainerController buttonContainerController;
-        GameManager.GameController gamecontroller =  Program.controller;
+        //private GameManager.GameController gameController;
+        GameController gamecontroller =  Program.controller;
         string backupText;
 
         public ButtonContainerUI(ButtonContainerController controller)

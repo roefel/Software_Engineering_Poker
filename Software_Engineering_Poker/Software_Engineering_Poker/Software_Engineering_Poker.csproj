@@ -76,13 +76,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TableContainer\TableContainerController.cs" />
-    <Compile Include="TableContainer\TableContainerModel.cs" />
-    <Compile Include="TableContainer\TableContainerUI.cs">
+    <Compile Include="CardSystem\CardSystemController.cs" />
+    <Compile Include="CardSystem\CardSystemModel.cs" />
+    <Compile Include="CardSystem\CardSystemUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TableContainer\TableContainerUI.Designer.cs">
-      <DependentUpon>TableContainerUI.cs</DependentUpon>
+    <Compile Include="CardSystem\CardSystemUI.Designer.cs">
+      <DependentUpon>CardSystemUI.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ButtonContainer\ButtonContainerUI.resx">
       <DependentUpon>ButtonContainerUI.cs</DependentUpon>
@@ -103,8 +103,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TableContainer\TableContainerUI.resx">
-      <DependentUpon>TableContainerUI.cs</DependentUpon>
+    <EmbeddedResource Include="CardSystem\CardSystemUI.resx">
+      <DependentUpon>CardSystemUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
