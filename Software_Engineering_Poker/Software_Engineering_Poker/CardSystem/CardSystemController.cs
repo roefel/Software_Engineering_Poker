@@ -29,7 +29,7 @@ namespace Software_Engineering_Poker
                 return tableUI;
             }
         }
-        
+
         public void RandomCard() //Returns a string (a random card) and puts it in a list so it can not be generated again
         {
             Random rnd = new Random();
@@ -46,6 +46,24 @@ namespace Software_Engineering_Poker
             view.dealerCard3.Image = Properties.Resources.hart_3; //The way to change the image of a card
 
             //return card;
+        }
+
+        public void UpdateTableTxt()
+        {
+            tableUI.tableMoneyValue.Text = MoneyModel.currentBid + "$";
+        }
+
+        public int TableMoneyValue
+        {
+            get
+            {
+                return tableModel.TableMoneyValue;
+            }
+
+            set
+            {
+                tableModel.TableMoneyValue = value;
+            }
         }
     }
 }
