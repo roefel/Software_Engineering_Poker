@@ -30,7 +30,7 @@ namespace Software_Engineering_Poker
             }
         }
         
-        public string RandomCard() //Returns a string (a random card) and puts it in a list so it can not be generated again
+        public void RandomCard() //Returns a string (a random card) and puts it in a list so it can not be generated again
         {
             Random rnd = new Random();
             string card;
@@ -42,7 +42,10 @@ namespace Software_Engineering_Poker
             cardsInUse.Add(card);
             Console.WriteLine(card);
             Console.WriteLine(cardsInUse.Count);
-            return card;
+            Console.ReadKey();
+            view.dealerCard3.Image = Properties.Resources.hart_3; //The way to change the image of a card
+
+            //return card;
         }
     }
 }

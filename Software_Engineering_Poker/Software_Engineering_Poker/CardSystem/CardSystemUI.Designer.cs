@@ -1,6 +1,6 @@
 ﻿namespace Software_Engineering_Poker
 {
-    partial class CardSystemUI
+    public partial class CardSystemUI
     {
         /// <summary> 
         /// Required designer variable.
@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.tableBox = new System.Windows.Forms.GroupBox();
             this.tableMoneyValue = new System.Windows.Forms.Label();
@@ -276,20 +276,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Label tableMoneyValue;
-        private System.Windows.Forms.GroupBox tableBox;
-        private System.Windows.Forms.PictureBox playerCard2;
-        private System.Windows.Forms.PictureBox playerCard1;
-        private System.Windows.Forms.PictureBox computer3Card2;
-        private System.Windows.Forms.PictureBox computer3Card1;
-        private System.Windows.Forms.PictureBox computer2Card2;
-        private System.Windows.Forms.PictureBox computer2Card1;
-        private System.Windows.Forms.PictureBox dealerCard5;
-        private System.Windows.Forms.PictureBox dealerCard4;
-        private System.Windows.Forms.PictureBox dealerCard3;
-        private System.Windows.Forms.PictureBox dealerCard2;
-        private System.Windows.Forms.PictureBox dealerCard1;
-        private System.Windows.Forms.PictureBox computer1Card2;
-        private System.Windows.Forms.PictureBox computer1Card1;
+        public System.Windows.Forms.Label tableMoneyValue;
+        public System.Windows.Forms.GroupBox tableBox;
+        public System.Windows.Forms.PictureBox playerCard2;
+        public System.Windows.Forms.PictureBox playerCard1;
+        public System.Windows.Forms.PictureBox computer3Card2;
+        public System.Windows.Forms.PictureBox computer3Card1;
+        public System.Windows.Forms.PictureBox computer2Card2;
+        public System.Windows.Forms.PictureBox computer2Card1;
+        public System.Windows.Forms.PictureBox dealerCard5;
+        public System.Windows.Forms.PictureBox dealerCard4;
+        public System.Windows.Forms.PictureBox dealerCard3;
+        public System.Windows.Forms.PictureBox dealerCard2;
+        public System.Windows.Forms.PictureBox dealerCard1;
+        public System.Windows.Forms.PictureBox computer1Card2;
+        public System.Windows.Forms.PictureBox computer1Card1;
     }
 }
