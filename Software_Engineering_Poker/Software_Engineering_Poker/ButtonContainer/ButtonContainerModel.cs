@@ -20,12 +20,12 @@ namespace Software_Engineering_Poker
         {
             moneyModel = new MoneyModel();
             totalMoney = moneyModel.currentPlayerBalance;
-            //currentBid = moneyModel.currentBid?;
+            currentBid = moneyModel.currentBid;
 
             //placeholder
             //totalMoney = 2000;
             isVast = false;
-            currentBid = 10;
+            //currentBid = 10;
         }
 
         // get en setter
