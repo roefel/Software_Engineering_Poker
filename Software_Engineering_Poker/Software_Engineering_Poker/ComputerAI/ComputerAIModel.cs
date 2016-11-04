@@ -14,7 +14,7 @@ namespace Software_Engineering_Poker
 
         public ComputerAIModel()
         {
-            cardsAI1 = new string[5];
+            cardsAI1 = new string[7];
         }
 
         public string[] cardsAI1

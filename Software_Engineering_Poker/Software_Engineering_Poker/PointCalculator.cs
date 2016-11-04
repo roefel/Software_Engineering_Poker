@@ -29,20 +29,20 @@ namespace Software_Engineering_Poker
 
         public int calculatePoints(string card1, string card2, string card3, string card4, string card5, string card6, string card7)
         {
-            cards[0] = card1;
+            cards[0] = card1; // zou vervangen worden door array die gevuld werd in ComputerAIModel met gedeelde kaarten
             cards[1] = card2;
             cards[2] = card3;
             cards[3] = card4;
             cards[4] = card5;
             cards[5] = card6;
-            cards[6] = card7;
+            cards[6] = card7; //
             cardTypes = getCardTypes(cards);
             cardsChecked = 0;
             cardNumbers = getCardNumber(cards);
-
+            cardsChecked = 0;
             Console.WriteLine(royalFlush());
             if (royalFlush()) {  return 110; }
-            if (fourOfAKind()) { return 110; }
+            else if (fourOfAKind()) { return 110; }
             else if (flush()) { return 90; }
             else if (fullHouse()) { return 90; }
             else if (straight()) { return 80; }
@@ -136,11 +136,6 @@ namespace Software_Engineering_Poker
             return false;
         }
 
-        //bool IsSequential(int[] array)
-        //{
-        //    return array.Zip(array.Skip(1), (a, b) => (a + 1) == b).All(x => x);
-        //}
-
         private bool royalFlush()
         {
             var result = cardTypes.GroupBy(i => i)
@@ -162,10 +157,6 @@ namespace Software_Engineering_Poker
                     {
                         return false;
                     }
-
-
-
-
                 }
                 else
                 {
