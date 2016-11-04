@@ -41,7 +41,7 @@
             this.playerMoneyLabel.Name = "playerMoneyLabel";
             this.playerMoneyLabel.Size = new System.Drawing.Size(69, 13);
             this.playerMoneyLabel.TabIndex = 0;
-            this.playerMoneyLabel.Text = "player money";
+            this.playerMoneyLabel.Text = "player money:";
             this.playerMoneyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             //this.playerMoneyLabel.Click += new System.EventHandler(this.playerMoneyLabel_Click);
             // 
