@@ -33,5 +33,10 @@ namespace Software_Engineering_Poker
         {
             //doiets
         }
+
+        private void randomCardGen_Click(object sender, EventArgs e)
+        {
+            mController.RandomCard();
+        }
     }
 }
