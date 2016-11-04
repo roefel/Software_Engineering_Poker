@@ -45,16 +45,24 @@ namespace Software_Engineering_Poker
             }
             while (cardsInUse.Contains(card));
             cardsInUse.Add(card);
-            Console.WriteLine(card);
-            Console.WriteLine(cardsInUse.Count);
-            Console.WriteLine(startupPath);
-            //Console.ReadKey();
-            cardSystemUI.playerPointer.Enabled = false;
-            cardSystemUI.playerPointer.Visible = false;
-            cardSystemUI.dealerCard2.Image = Properties.Resources.hart_10;
+            if (cardsInUse.Count == 52)
+            {
+                Console.WriteLine("There were " + cardsInUse.Count + " different random cards generated so far");
+                Console.WriteLine("Generated card: " + card);
+                Console.WriteLine("Max amount of different cards generated. Reshuffling the deck");
+                cardsInUse.Clear();
+            }
+            else
+            {
+                Console.WriteLine("There were " + cardsInUse.Count + " different random cards generated so far");
+                Console.WriteLine("Generated card: " + card);
+            }
             
-
+            
+            //cardSystemUI.dealerCard2.Image = Properties.Resources.hart_10;
             //return card;
+
+            //De 2 bovenstaande lijnen code werkten nog niet vanwege het gebrek aan kennis van windows Forms
         }
 
         public void UpdateTableTxt()
