@@ -109,45 +109,72 @@ namespace Software_Engineering_Poker
                 TotalMoney = TotalMoney - CurrentBid - (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
                 CurrentBid = CurrentBid + (ParseInt(buttonContainerUI.raiseBidTxtBox.Text));
             }
-            moneyModel.currentPlayerBalance = TotalMoney;
 
-            //input new value into Model currentBid
+            //input new values into MoneyModel
+            MoneyModel.currentPlayerBalance = TotalMoney;       
             MoneyModel.currentBid = CurrentBid;
+            MoneyModel.tableMoney = MoneyModel.tableMoney + MoneyModel.currentBid;
 
-            //update table's currentbid
+            //update table
             cardSystemController.UpdateTableTxt();
-            Console.WriteLine("playerbalance= " + TotalMoney);
+
+            //console output
+            Console.WriteLine("playerbalance= " + MoneyModel.currentPlayerBalance + "$");
+            Console.WriteLine("currentBid= " + MoneyModel.currentBid + "$");
+            Console.WriteLine("tablemoney= " + (MoneyModel.tableMoney) + "$");
         }
 
         public void callBet()
         {
             TotalMoney = TotalMoney - CurrentBid;
-            moneyModel.currentPlayerBalance = TotalMoney;
 
-            //input new value into Model currentBid
+            //input new values into MoneyModel
+            MoneyModel.currentPlayerBalance = TotalMoney;
             MoneyModel.currentBid = CurrentBid;
+            MoneyModel.tableMoney = MoneyModel.tableMoney + MoneyModel.currentBid;
 
-            //update table's currentbid
+            //update table
             cardSystemController.UpdateTableTxt();
-            Console.WriteLine("playerbalance= " + TotalMoney);
 
-            //cardSystemController.TableMoneyValue = TotalMoney;
-            //cardSystemUI.tableMoneyValue.Text = TotalMoney + "$";
+            //console output
+            Console.WriteLine("playerbalance= " + MoneyModel.currentPlayerBalance + "$");
+            Console.WriteLine("currentBid= " + MoneyModel.currentBid + "$");
+            Console.WriteLine("tablemoney= " + (MoneyModel.tableMoney) + "$");
         }
 
         public void foldBet()
         {
-            moneyModel.currentPlayerBalance = TotalMoney;
+            //input new values into MoneyModel
+            MoneyModel.currentPlayerBalance = TotalMoney;
             MoneyModel.currentBid = CurrentBid;
+            MoneyModel.tableMoney = MoneyModel.tableMoney;
+
+            //update table
+            cardSystemController.UpdateTableTxt();
+
+            //console output
+            Console.WriteLine("playerbalance= " + MoneyModel.currentPlayerBalance + "$");
+            Console.WriteLine("currentBid= " + MoneyModel.currentBid + "$");
+            Console.WriteLine("tablemoney= " + (MoneyModel.tableMoney) + "$");
         }
 
         public void allInBet()
         {
             CurrentBid = TotalMoney;
             TotalMoney = 0;
-            moneyModel.currentPlayerBalance = TotalMoney;
+
+            //input new values into MoneyModel
+            MoneyModel.currentPlayerBalance = TotalMoney;
             MoneyModel.currentBid = CurrentBid;
+            MoneyModel.tableMoney = MoneyModel.tableMoney + MoneyModel.currentBid;
+
+            //update table
             cardSystemController.UpdateTableTxt();
+
+            //console output
+            Console.WriteLine("playerbalance= " + MoneyModel.currentPlayerBalance + "$");
+            Console.WriteLine("currentBid= " + MoneyModel.currentBid + "$");
+            Console.WriteLine("tablemoney= " + (MoneyModel.tableMoney) + "$");
         }
 
         //string input naar int

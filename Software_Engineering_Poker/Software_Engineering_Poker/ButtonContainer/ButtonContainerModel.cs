@@ -19,7 +19,7 @@ namespace Software_Engineering_Poker
         public ButtonContainerModel()
         {
             moneyModel = new MoneyModel();
-            totalMoney = moneyModel.currentPlayerBalance;
+            totalMoney = MoneyModel.currentPlayerBalance;
             currentBid = MoneyModel.currentBid;
 
             isVast = false;

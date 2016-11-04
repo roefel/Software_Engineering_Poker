@@ -29,12 +29,25 @@ namespace Software_Engineering_Poker
         {
             get
             {
-                return moneyModel.currentPlayerBalance;
+                return MoneyModel.currentPlayerBalance;
             }
 
             set
             {
-                moneyModel.currentPlayerBalance = value;
+                MoneyModel.currentPlayerBalance = value;
+            }
+        }
+
+        public int tableMoney
+        {
+            get
+            {
+                return MoneyModel.tableMoney;
+            }
+
+            set
+            {
+                MoneyModel.tableMoney = value;
             }
         }
 
