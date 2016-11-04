@@ -11,7 +11,6 @@ namespace Software_Engineering_Poker.ComputerAI
         static ComputerAI computerAI;
         private static int _aiNumberTurn;
         private static int _roundNumber;
-        
 
         public ComputerAIController()
         {
