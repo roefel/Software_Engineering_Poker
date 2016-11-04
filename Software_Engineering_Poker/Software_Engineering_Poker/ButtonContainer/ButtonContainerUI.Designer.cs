@@ -35,6 +35,7 @@
             this.callBtn = new System.Windows.Forms.Button();
             this.raiseBidLabel = new System.Windows.Forms.Label();
             this.unlockBtnTest = new System.Windows.Forms.Button();
+            this.unlockBtnTest2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // raiseBtn
@@ -107,18 +108,29 @@
             // 
             // unlockBtnTest
             // 
-            this.unlockBtnTest.Location = new System.Drawing.Point(262, 74);
+            this.unlockBtnTest.Location = new System.Drawing.Point(205, 74);
             this.unlockBtnTest.Name = "unlockBtnTest";
             this.unlockBtnTest.Size = new System.Drawing.Size(135, 40);
             this.unlockBtnTest.TabIndex = 12;
-            this.unlockBtnTest.Text = "Temporary unlockBtnTest";
+            this.unlockBtnTest.Text = "Temporary unlockBtnTest (rounds)";
             this.unlockBtnTest.UseVisualStyleBackColor = true;
             this.unlockBtnTest.Click += new System.EventHandler(this.unlockBtnTest_Click);
+            // 
+            // unlockBtnTest2
+            // 
+            this.unlockBtnTest2.Location = new System.Drawing.Point(380, 74);
+            this.unlockBtnTest2.Name = "unlockBtnTest2";
+            this.unlockBtnTest2.Size = new System.Drawing.Size(135, 40);
+            this.unlockBtnTest2.TabIndex = 13;
+            this.unlockBtnTest2.Text = "Temporary unlockBtnTest (match)";
+            this.unlockBtnTest2.UseVisualStyleBackColor = true;
+            this.unlockBtnTest2.Click += new System.EventHandler(this.unlockBtnTest2_Click);
             // 
             // ButtonContainerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.unlockBtnTest2);
             this.Controls.Add(this.unlockBtnTest);
             this.Controls.Add(this.raiseBidLabel);
             this.Controls.Add(this.callBtn);
@@ -142,5 +154,6 @@
         public System.Windows.Forms.Button callBtn;
         public System.Windows.Forms.Label raiseBidLabel;
         public System.Windows.Forms.Button unlockBtnTest;
+        public System.Windows.Forms.Button unlockBtnTest2;
     }
 }

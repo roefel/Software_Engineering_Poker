@@ -87,9 +87,17 @@ namespace Software_Engineering_Poker
             //gamecontroller.endTurn();
         }
 
+        //this button unlocks the other buttons when a new turn would start
         private void unlockBtnTest_Click(object sender, EventArgs e)
         {
             //gamecontroller.numPlayerTurn = 0;
+            unlockBtns();
+        }
+
+        //this button unlocks the other buttons when a new round starts (after fold or all-in)
+        private void unlockBtnTest2_Click(object sender, EventArgs e)
+        {
+            //gamecontroller.endTurn();
             unlockBtns();
         }
 
