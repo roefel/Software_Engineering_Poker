@@ -20,7 +20,7 @@ namespace Software_Engineering_Poker
         {
             moneyModel = new MoneyModel();
             totalMoney = moneyModel.currentPlayerBalance;
-            currentBid = moneyModel.currentBid;
+            currentBid = MoneyModel.currentBid;
 
             isVast = false;
             ////placeholder
