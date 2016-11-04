@@ -152,7 +152,7 @@
     <None Include="images\cards\hart_7.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\cards\hart_8.png" />
+    <Resource Include="images\cards\hart_8.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="images\cards\hart_9.png" />
@@ -288,6 +288,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\cards\card_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\assets\pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\assets\computer1Pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\assets\computer2Pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\assets\computer3Pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\assets\playerPointer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

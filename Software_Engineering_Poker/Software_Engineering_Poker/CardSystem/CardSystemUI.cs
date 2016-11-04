@@ -22,7 +22,5 @@ namespace Software_Engineering_Poker
             //tableMoneyValue.Text = mController.TableMoneyValue + "$";
             tableMoneyValue.Text = MoneyModel.currentBid + "$";
         }
-        
-
     }
 }
